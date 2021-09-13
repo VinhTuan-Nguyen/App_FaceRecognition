@@ -7,6 +7,7 @@ import PIL.ImageTk
 import cv2
 import pyodbc
 
+
 mahp = sys.argv[1]
 magv = sys.argv[2]
 
@@ -106,26 +107,27 @@ class Camera:
         self.can_Camera.grid(row=3, columnspan=4)
 
     def btn_Accept_click(self):
+
         now = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         masv = "SV15335665"
         query = "SELECT * FROM tab_DKHP WHERE col_MaHP = ? and col_maSV = ?"
         cursor = self.conn.cursor()
         cursor.execute(query, (self.mahp, masv))
         result = cursor.fetchall()
+
         if len(result) == 0:
             message.showwarning("Lỗi", "Sinh Viên Không Thuộc Lớp Này")
         else:
-            data = (self.ngayDD, self.mahp, masv, 'Có Mặt', now)
-            if data not in self.listInsert:
+            if masv not in self.listDD:
+                self.listDD.append(masv)
+                data = (self.ngayDD, self.mahp, masv, 'Có Mặt', now)
                 self.listInsert.append(data)
-                print(self.listInsert)
                 message.showinfo("Thành Công", "Sinh Viên {} Đã Điểm Danh Thành Công".format(masv))
             else:
                 message.showwarning("Lỗi", "Sinh Viên {} Đã Điểm Danh".format(masv))
 
     def btn_Exit_click(self):
-        '''result = message.askquestion("Xác Nhận", "Xác Nhận Thoát Kết Thúc Điểm Danh")
-        if(result == message.YES):'''
+
         if len(self.listInsert) == 0:
             result = message.askokcancel("Lỗi", "Không Có Sinh Viên Nào Được Điểm Danh\n"
                                                 "Đồng Ý Thoát Phiên Điểm Danh Này")
@@ -146,6 +148,7 @@ class Camera:
             self.win2.mainloop()
 
     def btn_Ok_click(self):
+
         if self.txt_inputPass.get() == "":
             message.showwarning('Lỗi', 'Chưa Nhập Mật Khẩu')
             self.win2.destroy()
@@ -170,11 +173,13 @@ class Camera:
                     self.win2.destroy()
 
     def update_date(self):
+
         self.now = datetime.datetime.now()
         self.lb_datetime.configure(text=self.now.strftime('%Y-%m-%d %H:%M:%S'))
         self.win.after(1000, self.update_date)
 
     def update_frame(self):
+
         self.width = 1000
         self.height = 750
         self.ret, self.frame = self.camera.read()
@@ -189,6 +194,7 @@ class Camera:
         self.win.after(10, self.update_frame)
 
     def detec(self, image):
+
         self.image = image
         self.gray = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)
         self.box = self.gray[
