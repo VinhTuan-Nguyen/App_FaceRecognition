@@ -159,8 +159,10 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // frm_LOGIN
+            // frm00_LOGIN
             // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(561, 334);
             this.Controls.Add(this.lb_Messenger);
@@ -172,7 +174,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.btn_Login);
-            this.Name = "frm_LOGIN";
+            this.Name = "frm00_LOGIN";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
             this.ResumeLayout(false);

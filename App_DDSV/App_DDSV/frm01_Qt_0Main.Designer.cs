@@ -30,6 +30,11 @@ namespace App_DDSV
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.vềTrangChủToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thamKhảoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.item_UpdatePass = new System.Windows.Forms.ToolStripMenuItem();
+            this.item_LogOut = new System.Windows.Forms.ToolStripMenuItem();
+            this.item_Help = new System.Windows.Forms.ToolStripMenuItem();
             this.lớpHọcPhầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.item_LHP = new System.Windows.Forms.ToolStripMenuItem();
             this.item_ĐKHP = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,11 +45,6 @@ namespace App_DDSV
             this.item_Rollcall = new System.Windows.Forms.ToolStripMenuItem();
             this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.item_Account = new System.Windows.Forms.ToolStripMenuItem();
-            this.thamKhảoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.item_UpdatePass = new System.Windows.Forms.ToolStripMenuItem();
-            this.item_LogOut = new System.Windows.Forms.ToolStripMenuItem();
-            this.item_Help = new System.Windows.Forms.ToolStripMenuItem();
-            this.vềTrangChủToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Train = new System.Windows.Forms.Button();
             this.btn_qlACC = new System.Windows.Forms.Button();
@@ -79,6 +79,48 @@ namespace App_DDSV
             this.menuStrip1.Size = new System.Drawing.Size(1924, 27);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // vềTrangChủToolStripMenuItem
+            // 
+            this.vềTrangChủToolStripMenuItem.Font = new System.Drawing.Font("Constantia", 12F);
+            this.vềTrangChủToolStripMenuItem.ForeColor = System.Drawing.Color.MediumBlue;
+            this.vềTrangChủToolStripMenuItem.Name = "vềTrangChủToolStripMenuItem";
+            this.vềTrangChủToolStripMenuItem.Size = new System.Drawing.Size(93, 23);
+            this.vềTrangChủToolStripMenuItem.Text = "Trang Chủ";
+            this.vềTrangChủToolStripMenuItem.Click += new System.EventHandler(this.item_Main_Click);
+            // 
+            // thamKhảoToolStripMenuItem
+            // 
+            this.thamKhảoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.item_UpdatePass,
+            this.item_LogOut,
+            this.item_Help});
+            this.thamKhảoToolStripMenuItem.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thamKhảoToolStripMenuItem.ForeColor = System.Drawing.Color.MediumBlue;
+            this.thamKhảoToolStripMenuItem.Name = "thamKhảoToolStripMenuItem";
+            this.thamKhảoToolStripMenuItem.Size = new System.Drawing.Size(81, 23);
+            this.thamKhảoToolStripMenuItem.Text = "Cá Nhân";
+            // 
+            // item_UpdatePass
+            // 
+            this.item_UpdatePass.Name = "item_UpdatePass";
+            this.item_UpdatePass.Size = new System.Drawing.Size(197, 24);
+            this.item_UpdatePass.Text = "Đổi Mật Khẩu";
+            this.item_UpdatePass.Click += new System.EventHandler(this.item_UpdatePass_Click);
+            // 
+            // item_LogOut
+            // 
+            this.item_LogOut.Name = "item_LogOut";
+            this.item_LogOut.Size = new System.Drawing.Size(197, 24);
+            this.item_LogOut.Text = "Đăng Xuất";
+            this.item_LogOut.Click += new System.EventHandler(this.item_LogOut_Click);
+            // 
+            // item_Help
+            // 
+            this.item_Help.Name = "item_Help";
+            this.item_Help.Size = new System.Drawing.Size(197, 24);
+            this.item_Help.Text = "HDSD Hệ Thống";
+            this.item_Help.Click += new System.EventHandler(this.item_Help_Click);
             // 
             // lớpHọcPhầnToolStripMenuItem
             // 
@@ -163,48 +205,6 @@ namespace App_DDSV
             this.item_Account.Size = new System.Drawing.Size(213, 24);
             this.item_Account.Text = "Quản Lý Tài Khoản";
             this.item_Account.Click += new System.EventHandler(this.item_Account_Click);
-            // 
-            // thamKhảoToolStripMenuItem
-            // 
-            this.thamKhảoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.item_UpdatePass,
-            this.item_LogOut,
-            this.item_Help});
-            this.thamKhảoToolStripMenuItem.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thamKhảoToolStripMenuItem.ForeColor = System.Drawing.Color.MediumBlue;
-            this.thamKhảoToolStripMenuItem.Name = "thamKhảoToolStripMenuItem";
-            this.thamKhảoToolStripMenuItem.Size = new System.Drawing.Size(81, 23);
-            this.thamKhảoToolStripMenuItem.Text = "Cá Nhân";
-            // 
-            // item_UpdatePass
-            // 
-            this.item_UpdatePass.Name = "item_UpdatePass";
-            this.item_UpdatePass.Size = new System.Drawing.Size(197, 24);
-            this.item_UpdatePass.Text = "Đổi Mật Khẩu";
-            this.item_UpdatePass.Click += new System.EventHandler(this.item_UpdatePass_Click);
-            // 
-            // item_LogOut
-            // 
-            this.item_LogOut.Name = "item_LogOut";
-            this.item_LogOut.Size = new System.Drawing.Size(197, 24);
-            this.item_LogOut.Text = "Đăng Xuất";
-            this.item_LogOut.Click += new System.EventHandler(this.item_LogOut_Click);
-            // 
-            // item_Help
-            // 
-            this.item_Help.Name = "item_Help";
-            this.item_Help.Size = new System.Drawing.Size(197, 24);
-            this.item_Help.Text = "HDSD Hệ Thống";
-            this.item_Help.Click += new System.EventHandler(this.item_Help_Click);
-            // 
-            // vềTrangChủToolStripMenuItem
-            // 
-            this.vềTrangChủToolStripMenuItem.Font = new System.Drawing.Font("Constantia", 12F);
-            this.vềTrangChủToolStripMenuItem.ForeColor = System.Drawing.Color.MediumBlue;
-            this.vềTrangChủToolStripMenuItem.Name = "vềTrangChủToolStripMenuItem";
-            this.vềTrangChủToolStripMenuItem.Size = new System.Drawing.Size(93, 23);
-            this.vềTrangChủToolStripMenuItem.Text = "Trang Chủ";
-            this.vềTrangChủToolStripMenuItem.Click += new System.EventHandler(this.item_Main_Click);
             // 
             // panel1
             // 
@@ -391,8 +391,8 @@ namespace App_DDSV
             // 
             // frm01_Qt_0Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1924, 1061);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);

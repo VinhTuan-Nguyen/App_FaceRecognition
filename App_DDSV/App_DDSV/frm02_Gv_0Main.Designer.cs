@@ -286,15 +286,15 @@ namespace App_DDSV
             this.label5.TabIndex = 13;
             this.label5.Text = "ĐIỂM DANH GƯƠNG MẶT";
             // 
-            // frm02_Gv_Main
+            // frm02_Gv_0Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1924, 1061);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "frm02_Gv_Main";
+            this.Name = "frm02_Gv_0Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang Chủ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

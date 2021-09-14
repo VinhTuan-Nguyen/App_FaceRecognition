@@ -183,10 +183,10 @@ namespace App_DDSV
             this.ch_ShowPass.UseVisualStyleBackColor = true;
             this.ch_ShowPass.CheckedChanged += new System.EventHandler(this.ch_ShowPass_CheckedChanged);
             // 
-            // frm_UpdatePass
+            // frm00_UpdatePass
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(561, 334);
             this.Controls.Add(this.ch_ShowPass);
@@ -201,7 +201,7 @@ namespace App_DDSV
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.Lavender;
-            this.Name = "frm_UpdatePass";
+            this.Name = "frm00_UpdatePass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đổi Mật Khẩu";
             this.ResumeLayout(false);

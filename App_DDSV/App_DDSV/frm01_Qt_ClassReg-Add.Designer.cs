@@ -33,15 +33,15 @@ namespace App_DDSV
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.col_Stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_MaHP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_MaSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_NgayDK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_Import = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.col_Stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_MaHP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_MaSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_NgayDK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,6 +81,34 @@ namespace App_DDSV
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.Size = new System.Drawing.Size(1037, 463);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // col_Stt
+            // 
+            this.col_Stt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.col_Stt.HeaderText = "STT";
+            this.col_Stt.Name = "col_Stt";
+            this.col_Stt.ReadOnly = true;
+            this.col_Stt.Width = 50;
+            // 
+            // col_MaHP
+            // 
+            this.col_MaHP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_MaHP.HeaderText = "Mã Học Phần";
+            this.col_MaHP.Name = "col_MaHP";
+            // 
+            // col_MaSV
+            // 
+            this.col_MaSV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_MaSV.HeaderText = "Mã Sinh Viên";
+            this.col_MaSV.Name = "col_MaSV";
+            // 
+            // col_NgayDK
+            // 
+            this.col_NgayDK.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.col_NgayDK.HeaderText = "Ngày ĐK";
+            this.col_NgayDK.Name = "col_NgayDK";
+            this.col_NgayDK.ReadOnly = true;
+            this.col_NgayDK.Width = 120;
             // 
             // btn_Import
             // 
@@ -132,38 +160,10 @@ namespace App_DDSV
             this.label2.TabIndex = 3;
             this.label2.Text = "Đăng Kí Học Phần";
             // 
-            // col_Stt
-            // 
-            this.col_Stt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.col_Stt.HeaderText = "STT";
-            this.col_Stt.Name = "col_Stt";
-            this.col_Stt.ReadOnly = true;
-            this.col_Stt.Width = 50;
-            // 
-            // col_MaHP
-            // 
-            this.col_MaHP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_MaHP.HeaderText = "Mã Học Phần";
-            this.col_MaHP.Name = "col_MaHP";
-            // 
-            // col_MaSV
-            // 
-            this.col_MaSV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_MaSV.HeaderText = "Mã Sinh Viên";
-            this.col_MaSV.Name = "col_MaSV";
-            // 
-            // col_NgayDK
-            // 
-            this.col_NgayDK.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.col_NgayDK.HeaderText = "Ngày ĐK";
-            this.col_NgayDK.Name = "col_NgayDK";
-            this.col_NgayDK.ReadOnly = true;
-            this.col_NgayDK.Width = 120;
-            // 
             // frm01_Qt_ClassReg_Add
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(1037, 613);
             this.Controls.Add(this.label2);

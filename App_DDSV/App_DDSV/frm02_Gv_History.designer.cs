@@ -40,12 +40,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txt_TenSV = new System.Windows.Forms.TextBox();
             this.dgv_History = new System.Windows.Forms.DataGridView();
-            this.btn_Search = new System.Windows.Forms.Button();
-            this.pick_Search = new System.Windows.Forms.DateTimePicker();
             this.col_Stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_NgayDD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_GioDD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_Search = new System.Windows.Forms.Button();
+            this.pick_Search = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_History)).BeginInit();
             this.SuspendLayout();
             // 
@@ -185,31 +185,6 @@
             this.dgv_History.TabIndex = 2;
             this.dgv_History.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgv_History_RowPrePaint);
             // 
-            // btn_Search
-            // 
-            this.btn_Search.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_Search.Font = new System.Drawing.Font("Constantia", 12.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.btn_Search.Location = new System.Drawing.Point(483, 65);
-            this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(141, 36);
-            this.btn_Search.TabIndex = 1;
-            this.btn_Search.Text = "Tìm Kiếm";
-            this.btn_Search.UseVisualStyleBackColor = true;
-            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
-            // 
-            // pick_Search
-            // 
-            this.pick_Search.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pick_Search.CustomFormat = "dd - MM -yyyy";
-            this.pick_Search.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12.75F, System.Drawing.FontStyle.Bold);
-            this.pick_Search.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.pick_Search.Location = new System.Drawing.Point(288, 69);
-            this.pick_Search.Name = "pick_Search";
-            this.pick_Search.Size = new System.Drawing.Size(177, 28);
-            this.pick_Search.TabIndex = 14;
-            this.pick_Search.Value = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
-            // 
             // col_Stt
             // 
             this.col_Stt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -236,10 +211,35 @@
             this.col_GhiChu.HeaderText = "Ghi Chú";
             this.col_GhiChu.Name = "col_GhiChu";
             // 
-            // frm02_Gv_InfoStudent
+            // btn_Search
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.btn_Search.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_Search.Font = new System.Drawing.Font("Constantia", 12.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btn_Search.Location = new System.Drawing.Point(483, 65);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(141, 36);
+            this.btn_Search.TabIndex = 1;
+            this.btn_Search.Text = "Tìm Kiếm";
+            this.btn_Search.UseVisualStyleBackColor = true;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
+            // 
+            // pick_Search
+            // 
+            this.pick_Search.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pick_Search.CustomFormat = "dd - MM -yyyy";
+            this.pick_Search.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12.75F, System.Drawing.FontStyle.Bold);
+            this.pick_Search.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.pick_Search.Location = new System.Drawing.Point(288, 69);
+            this.pick_Search.Name = "pick_Search";
+            this.pick_Search.Size = new System.Drawing.Size(177, 28);
+            this.pick_Search.TabIndex = 14;
+            this.pick_Search.Value = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
+            // 
+            // frm02_Gv_History
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(922, 621);
             this.Controls.Add(this.pick_Search);
@@ -252,7 +252,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "frm02_Gv_InfoStudent";
+            this.Name = "frm02_Gv_History";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lịch Sử Điểm Danh";
             this.Load += new System.EventHandler(this.frm02_Gv_History_Load);
