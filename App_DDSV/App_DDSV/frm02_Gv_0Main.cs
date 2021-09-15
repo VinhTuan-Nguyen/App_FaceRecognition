@@ -43,7 +43,7 @@ namespace App_DDSV
 
         private void item_ClassInfo_Click(object sender, EventArgs e)
         {
-            user2_Gv_ClassInfo f = new user2_Gv_ClassInfo(info);
+            new user2_Gv_ClassInfo(info);
             if (!panel1.Controls.Contains(user2_Gv_ClassInfo.Instance))
             {
                 panel1.Controls.Add(user2_Gv_ClassInfo.Instance);
@@ -57,6 +57,7 @@ namespace App_DDSV
         {
             if (!panel1.Controls.Contains(user2_Gv_History.Instance))
             {
+                new user2_Gv_History(info);
                 panel1.Controls.Add(user2_Gv_History.Instance);
                 user2_Gv_History.Instance.Dock = DockStyle.Fill;
                 user2_Gv_History.Instance.BringToFront();

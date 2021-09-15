@@ -54,6 +54,7 @@ namespace App_DDSV
 
         private void btn_DiemDanh_Click(object sender, EventArgs e)
         {
+            btn_DiemDanh.Enabled = false;
             if (txt_MaHP.Text == "")
             {
                 MessageBox.Show("Thông Tin Lớp Rỗng", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -68,6 +69,7 @@ namespace App_DDSV
                 frm02_Gv_RollCall f = new frm02_Gv_RollCall(txt_MaHP.Text, Column);
                 f.ShowDialog();
             }
+            btn_DiemDanh.Enabled = true;
         }
 
         private void btn_ViewClass_Click(object sender, EventArgs e)

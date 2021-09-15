@@ -31,7 +31,7 @@ class Camera:
         '''
         self.conn = pyodbc.connect(
             "Driver={SQL Server Native Client 11.0};"
-            "Server=DESKTOP-18V51P3;"
+            "Server=DESKTOP-KV5JDU2;"
             "Database=db_DDSV;"
             "Trusted_Connection=yes;", autocommit=True)
         '''
@@ -203,11 +203,10 @@ class Camera:
         self.faces = self.cascade.detectMultiScale(self.box)
         for (x, y, width, height) in self.faces:
             face = self.box[x:x + width, y:y + height]
-            if (len(face) >= 300 and len(face) <= 400):
-                cv2.rectangle(self.image,
-                              (x + int(self.width / 7), y + int(self.height / 10)),
-                              (x + width + int(self.width / 7), y + height + int(self.height / 10)),
-                              (255, 0, 0), 2)
+            cv2.rectangle(self.image,
+                          (x + int(self.width / 7), y + int(self.height / 10)),
+                          (x + width + int(self.width / 7), y + height + int(self.height / 10)),
+                          (255, 0, 0), 2)
         self.image = PIL.ImageTk.PhotoImage(image=PIL.Image.fromarray(self.image))
         return self.image
 

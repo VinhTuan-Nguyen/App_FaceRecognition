@@ -637,6 +637,8 @@ namespace App_DDSV
             this.dgv_LoadData.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_LoadData.Size = new System.Drawing.Size(1485, 826);
             this.dgv_LoadData.TabIndex = 5;
+            this.dgv_LoadData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_LoadData_CellDoubleClick);
+            this.dgv_LoadData.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgv_LoadData_RowPrePaint);
             // 
             // col_Stt
             // 

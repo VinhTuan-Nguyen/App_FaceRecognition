@@ -9,8 +9,8 @@ namespace App_DDSV
 {
     class conSql
     {
-        public static string conString = 
-            "Data Source=DESKTOP-18V51P3;" +
+        public static string conString =
+            "Data Source=DESKTOP-KV5JDU2;" +
             "Initial Catalog=db_DDSV;" +
             "Integrated Security=True;" +
             "MultipleActiveResultSets=True";

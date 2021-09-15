@@ -29,7 +29,7 @@ namespace App_DDSV
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -43,10 +43,10 @@ namespace App_DDSV
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.date_Start = new System.Windows.Forms.DateTimePicker();
-            this.date_End = new System.Windows.Forms.DateTimePicker();
+            this.pick_Start = new System.Windows.Forms.DateTimePicker();
+            this.pick_End = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_DataView = new System.Windows.Forms.DataGridView();
             this.col_Stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_MaSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_HoLot = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,11 +54,12 @@ namespace App_DDSV
             this.col_Lop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_GioiTinh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.col_GioDD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DataView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -94,8 +95,8 @@ namespace App_DDSV
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.date_Start);
-            this.groupBox2.Controls.Add(this.date_End);
+            this.groupBox2.Controls.Add(this.pick_Start);
+            this.groupBox2.Controls.Add(this.pick_End);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox2.Location = new System.Drawing.Point(0, 70);
             this.groupBox2.Name = "groupBox2";
@@ -122,6 +123,7 @@ namespace App_DDSV
             this.btn_View.TabIndex = 3;
             this.btn_View.Text = "Xem";
             this.btn_View.UseVisualStyleBackColor = true;
+            this.btn_View.Click += new System.EventHandler(this.btn_View_Click);
             // 
             // btn_GetList
             // 
@@ -132,10 +134,12 @@ namespace App_DDSV
             this.btn_GetList.TabIndex = 3;
             this.btn_GetList.Text = "Lấy Danh Sách Lớp";
             this.btn_GetList.UseVisualStyleBackColor = true;
+            this.btn_GetList.Click += new System.EventHandler(this.btn_GetList_Click);
             // 
             // cbb_List
             // 
             this.cbb_List.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbb_List.FormatString = "yyyy-MM-dd HH:mm:ss";
             this.cbb_List.FormattingEnabled = true;
             this.cbb_List.Location = new System.Drawing.Point(1281, 65);
             this.cbb_List.Name = "cbb_List";
@@ -150,6 +154,7 @@ namespace App_DDSV
             this.cbb_MaHP.Name = "cbb_MaHP";
             this.cbb_MaHP.Size = new System.Drawing.Size(181, 28);
             this.cbb_MaHP.TabIndex = 2;
+            this.cbb_MaHP.TextChanged += new System.EventHandler(this.cbb_MaHP_TextChanged);
             // 
             // label6
             // 
@@ -201,31 +206,32 @@ namespace App_DDSV
             this.label2.TabIndex = 1;
             this.label2.Text = "Từ Ngày:";
             // 
-            // date_Start
+            // pick_Start
             // 
-            this.date_Start.CustomFormat = "dd - mm - yyyy";
-            this.date_Start.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date_Start.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.date_Start.Location = new System.Drawing.Point(59, 66);
-            this.date_Start.Name = "date_Start";
-            this.date_Start.Size = new System.Drawing.Size(231, 27);
-            this.date_Start.TabIndex = 0;
-            this.date_Start.Value = new System.DateTime(2021, 9, 12, 10, 7, 0, 0);
+            this.pick_Start.CustomFormat = "dd - MM - yyyy HH:mm:ss";
+            this.pick_Start.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pick_Start.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.pick_Start.Location = new System.Drawing.Point(59, 66);
+            this.pick_Start.Name = "pick_Start";
+            this.pick_Start.Size = new System.Drawing.Size(231, 27);
+            this.pick_Start.TabIndex = 0;
+            this.pick_Start.Value = new System.DateTime(2021, 9, 12, 0, 0, 0, 0);
             // 
-            // date_End
+            // pick_End
             // 
-            this.date_End.CustomFormat = "dd - mm - yyyy";
-            this.date_End.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date_End.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.date_End.Location = new System.Drawing.Point(326, 66);
-            this.date_End.Name = "date_End";
-            this.date_End.Size = new System.Drawing.Size(231, 27);
-            this.date_End.TabIndex = 0;
+            this.pick_End.CustomFormat = "dd - MM - yyyy HH:mm:ss";
+            this.pick_End.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pick_End.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.pick_End.Location = new System.Drawing.Point(326, 66);
+            this.pick_End.Name = "pick_End";
+            this.pick_End.Size = new System.Drawing.Size(231, 27);
+            this.pick_End.TabIndex = 0;
+            this.pick_End.Value = new System.DateTime(2021, 9, 15, 0, 0, 0, 0);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Lavender;
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dgv_DataView);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 183);
             this.groupBox1.Name = "groupBox1";
@@ -234,24 +240,24 @@ namespace App_DDSV
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh Sách Điểm Danh";
             // 
-            // dataGridView1
+            // dgv_DataView
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Lavender;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_DataView.AllowUserToAddRows = false;
+            this.dgv_DataView.AllowUserToDeleteRows = false;
+            this.dgv_DataView.AllowUserToResizeRows = false;
+            this.dgv_DataView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_DataView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv_DataView.BackgroundColor = System.Drawing.Color.Lavender;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_DataView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgv_DataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_DataView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_Stt,
             this.col_MaSV,
             this.col_HoLot,
@@ -259,13 +265,14 @@ namespace App_DDSV
             this.col_Lop,
             this.col_Email,
             this.col_GioiTinh,
+            this.col_GioDD,
             this.col_GhiChu});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 16);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(1918, 832);
-            this.dataGridView1.TabIndex = 1;
+            this.dgv_DataView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_DataView.Location = new System.Drawing.Point(3, 16);
+            this.dgv_DataView.Name = "dgv_DataView";
+            this.dgv_DataView.RowHeadersVisible = false;
+            this.dgv_DataView.Size = new System.Drawing.Size(1918, 832);
+            this.dgv_DataView.TabIndex = 1;
             // 
             // col_Stt
             // 
@@ -277,6 +284,7 @@ namespace App_DDSV
             // col_MaSV
             // 
             this.col_MaSV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.col_MaSV.DataPropertyName = "col_MaSV";
             this.col_MaSV.HeaderText = "Mã Số Sinh Viên";
             this.col_MaSV.Name = "col_MaSV";
             this.col_MaSV.Width = 200;
@@ -284,6 +292,7 @@ namespace App_DDSV
             // col_HoLot
             // 
             this.col_HoLot.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.col_HoLot.DataPropertyName = "col_HoLot";
             this.col_HoLot.HeaderText = "Họ Đệm";
             this.col_HoLot.Name = "col_HoLot";
             this.col_HoLot.Width = 200;
@@ -291,6 +300,7 @@ namespace App_DDSV
             // col_Ten
             // 
             this.col_Ten.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.col_Ten.DataPropertyName = "col_Ten";
             this.col_Ten.HeaderText = "Tên SV";
             this.col_Ten.Name = "col_Ten";
             this.col_Ten.Width = 120;
@@ -298,6 +308,7 @@ namespace App_DDSV
             // col_Lop
             // 
             this.col_Lop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.col_Lop.DataPropertyName = "col_Lop";
             this.col_Lop.HeaderText = "Lớp";
             this.col_Lop.Name = "col_Lop";
             this.col_Lop.Width = 120;
@@ -305,21 +316,32 @@ namespace App_DDSV
             // col_Email
             // 
             this.col_Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_Email.DataPropertyName = "col_Email";
             this.col_Email.HeaderText = "Email";
             this.col_Email.Name = "col_Email";
             // 
             // col_GioiTinh
             // 
             this.col_GioiTinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.col_GioiTinh.DataPropertyName = "col_GioiTinh";
             this.col_GioiTinh.HeaderText = "Nam";
             this.col_GioiTinh.Name = "col_GioiTinh";
             this.col_GioiTinh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.col_GioiTinh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.col_GioiTinh.Width = 80;
             // 
+            // col_GioDD
+            // 
+            this.col_GioDD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.col_GioDD.DataPropertyName = "col_GioDD";
+            this.col_GioDD.HeaderText = "Điểm Danh Lúc";
+            this.col_GioDD.Name = "col_GioDD";
+            this.col_GioDD.Width = 200;
+            // 
             // col_GhiChu
             // 
             this.col_GhiChu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.col_GhiChu.DataPropertyName = "col_GhiChu";
             this.col_GhiChu.HeaderText = "Ghi Chú";
             this.col_GhiChu.Name = "col_GhiChu";
             this.col_GhiChu.Width = 200;
@@ -339,7 +361,7 @@ namespace App_DDSV
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DataView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -350,8 +372,8 @@ namespace App_DDSV
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DateTimePicker date_End;
+        private System.Windows.Forms.DataGridView dgv_DataView;
+        private System.Windows.Forms.DateTimePicker pick_End;
         private System.Windows.Forms.TextBox txt_TenHP;
         private System.Windows.Forms.Button btn_View;
         private System.Windows.Forms.Button btn_GetList;
@@ -362,7 +384,7 @@ namespace App_DDSV
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker date_Start;
+        private System.Windows.Forms.DateTimePicker pick_Start;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Stt;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_MaSV;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_HoLot;
@@ -370,6 +392,7 @@ namespace App_DDSV
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Lop;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Email;
         private System.Windows.Forms.DataGridViewCheckBoxColumn col_GioiTinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_GioDD;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_GhiChu;
     }
 }
