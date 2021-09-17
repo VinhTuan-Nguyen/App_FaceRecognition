@@ -54,7 +54,6 @@ D:\0_LOCAL\App_FaceRecognition\App_DDSV\App_DDSV\obj\Debug\App_DDSV.frm01_Qt_Acc
 D:\0_LOCAL\App_FaceRecognition\App_DDSV\App_DDSV\obj\Debug\App_DDSV.frm02_Gv_InfoLecturers.resources
 D:\0_LOCAL\App_FaceRecognition\App_DDSV\App_DDSV\obj\Debug\App_DDSV.frm02_Gv_0Main.resources
 D:\0_LOCAL\App_FaceRecognition\App_DDSV\App_DDSV\obj\Debug\App_DDSV.frm02_Gv_History.resources
-D:\0_LOCAL\App_FaceRecognition\App_DDSV\App_DDSV\obj\Debug\App_DDSV.frm02_Gv_RollCall.resources
 D:\0_LOCAL\App_FaceRecognition\App_DDSV\App_DDSV\obj\Debug\App_DDSV.Properties.Resources.resources
 D:\0_LOCAL\App_FaceRecognition\App_DDSV\App_DDSV\obj\Debug\App_DDSV.user1_Qt_Account.resources
 D:\0_LOCAL\App_FaceRecognition\App_DDSV\App_DDSV\obj\Debug\App_DDSV.user1_Qt_Class.resources
@@ -71,3 +70,5 @@ D:\0_LOCAL\App_FaceRecognition\App_DDSV\App_DDSV\obj\Debug\App_DDSV.pdb
 C:\Users\ASUS\OneDrive\Desktop\New folder (4)\App_FaceRecognition\App_DDSV\App_DDSV\bin\Debug\App_DDSV.exe.config
 C:\Users\ASUS\OneDrive\Desktop\New folder (4)\App_FaceRecognition\App_DDSV\App_DDSV\obj\Debug\App_DDSV.exe
 C:\Users\ASUS\OneDrive\Desktop\New folder (4)\App_FaceRecognition\App_DDSV\App_DDSV\obj\Debug\App_DDSV.pdb
+D:\0_LOCAL\App_FaceRecognition\App_DDSV\App_DDSV\obj\Debug\App_DDSV.frm02_Gv_Note.resources
+D:\0_LOCAL\App_FaceRecognition\App_DDSV\App_DDSV\obj\Debug\App_DDSV.frm02_Gv_Summary.resources

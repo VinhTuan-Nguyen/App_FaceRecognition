@@ -54,21 +54,29 @@ namespace App_DDSV
 
         private void btn_DiemDanh_Click(object sender, EventArgs e)
         {
+            DateTime now = DateTime.Now;
             btn_DiemDanh.Enabled = false;
+
             if (txt_MaHP.Text == "")
             {
                 MessageBox.Show("Thông Tin Lớp Rỗng", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if(txt_TrangThai.Text == "Đã Hoàn Tất")
+            {
+                MessageBox.Show("Không Ở Trạng Thái Mở Lớp\nKhông Thể Điểm Danh", "Lỗi",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 Process process = new Process();
                 process.StartInfo.FileName = @"UI_Camera.exe";
-                process.StartInfo.Arguments = txt_MaHP.Text + " " + lb_MaGV.Text;
+                process.StartInfo.Arguments = txt_MaHP.Text + " " + lb_MaGV.Text + " " + now;
                 process.Start();
                 process.WaitForExit();
-                frm02_Gv_RollCall f = new frm02_Gv_RollCall(txt_MaHP.Text, Column);
+                frm02_Gv_Summary f = new frm02_Gv_Summary(txt_MaHP.Text, txt_TenHP.Text, now.ToString());
                 f.ShowDialog();
             }
+
             btn_DiemDanh.Enabled = true;
         }
 

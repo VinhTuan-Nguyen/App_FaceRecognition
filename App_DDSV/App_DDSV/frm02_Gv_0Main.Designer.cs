@@ -58,6 +58,7 @@ namespace App_DDSV
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.DarkGray;
+            this.menuStrip1.Font = new System.Drawing.Font("Constantia", 12F);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.item_Main,
             this.thôngTinCáNhânToolStripMenuItem,
@@ -71,8 +72,9 @@ namespace App_DDSV
             // 
             // item_Main
             // 
+            this.item_Main.ForeColor = System.Drawing.Color.MediumBlue;
             this.item_Main.Name = "item_Main";
-            this.item_Main.Size = new System.Drawing.Size(84, 23);
+            this.item_Main.Size = new System.Drawing.Size(93, 23);
             this.item_Main.Text = "Trang Chủ";
             this.item_Main.Click += new System.EventHandler(this.item_Main_Click);
             // 
@@ -81,21 +83,22 @@ namespace App_DDSV
             this.thôngTinCáNhânToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.item_InfoLecturers,
             this.item_Upass});
+            this.thôngTinCáNhânToolStripMenuItem.ForeColor = System.Drawing.Color.MediumBlue;
             this.thôngTinCáNhânToolStripMenuItem.Name = "thôngTinCáNhânToolStripMenuItem";
-            this.thôngTinCáNhânToolStripMenuItem.Size = new System.Drawing.Size(78, 23);
+            this.thôngTinCáNhânToolStripMenuItem.Size = new System.Drawing.Size(85, 23);
             this.thôngTinCáNhânToolStripMenuItem.Text = " Cá Nhân";
             // 
             // item_InfoLecturers
             // 
             this.item_InfoLecturers.Name = "item_InfoLecturers";
-            this.item_InfoLecturers.Size = new System.Drawing.Size(196, 24);
+            this.item_InfoLecturers.Size = new System.Drawing.Size(215, 24);
             this.item_InfoLecturers.Text = "Thông Tin Cá Nhân";
             this.item_InfoLecturers.Click += new System.EventHandler(this.item_InfoLecturers_Click);
             // 
             // item_Upass
             // 
             this.item_Upass.Name = "item_Upass";
-            this.item_Upass.Size = new System.Drawing.Size(196, 24);
+            this.item_Upass.Size = new System.Drawing.Size(215, 24);
             this.item_Upass.Text = "Đổi Mật Khẩu";
             this.item_Upass.Click += new System.EventHandler(this.item_Upass_Click);
             // 
@@ -104,21 +107,22 @@ namespace App_DDSV
             this.thôngTinĐiểmDanhToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.item_ClassInfo,
             this.item_History});
+            this.thôngTinĐiểmDanhToolStripMenuItem.ForeColor = System.Drawing.Color.MediumBlue;
             this.thôngTinĐiểmDanhToolStripMenuItem.Name = "thôngTinĐiểmDanhToolStripMenuItem";
-            this.thôngTinĐiểmDanhToolStripMenuItem.Size = new System.Drawing.Size(90, 23);
+            this.thôngTinĐiểmDanhToolStripMenuItem.Size = new System.Drawing.Size(102, 23);
             this.thôngTinĐiểmDanhToolStripMenuItem.Text = "Điểm Danh";
             // 
             // item_ClassInfo
             // 
             this.item_ClassInfo.Name = "item_ClassInfo";
-            this.item_ClassInfo.Size = new System.Drawing.Size(194, 24);
+            this.item_ClassInfo.Size = new System.Drawing.Size(215, 24);
             this.item_ClassInfo.Text = "Thông Tin Lớp";
             this.item_ClassInfo.Click += new System.EventHandler(this.item_ClassInfo_Click);
             // 
             // item_History
             // 
             this.item_History.Name = "item_History";
-            this.item_History.Size = new System.Drawing.Size(194, 24);
+            this.item_History.Size = new System.Drawing.Size(215, 24);
             this.item_History.Text = "Lịch Sử Điểm Danh";
             this.item_History.Click += new System.EventHandler(this.item_History_Click);
             // 
@@ -127,21 +131,23 @@ namespace App_DDSV
             this.thamKhảoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.item_Help,
             this.item_Logout});
+            this.thamKhảoToolStripMenuItem.Font = new System.Drawing.Font("Constantia", 12F);
+            this.thamKhảoToolStripMenuItem.ForeColor = System.Drawing.Color.MediumBlue;
             this.thamKhảoToolStripMenuItem.Name = "thamKhảoToolStripMenuItem";
-            this.thamKhảoToolStripMenuItem.Size = new System.Drawing.Size(90, 23);
+            this.thamKhảoToolStripMenuItem.Size = new System.Drawing.Size(103, 23);
             this.thamKhảoToolStripMenuItem.Text = "Tham Khảo";
             // 
             // item_Help
             // 
             this.item_Help.Name = "item_Help";
-            this.item_Help.Size = new System.Drawing.Size(179, 24);
+            this.item_Help.Size = new System.Drawing.Size(197, 24);
             this.item_Help.Text = "HDSD Hệ Thống";
             this.item_Help.Click += new System.EventHandler(this.item_Help_Click);
             // 
             // item_Logout
             // 
             this.item_Logout.Name = "item_Logout";
-            this.item_Logout.Size = new System.Drawing.Size(179, 24);
+            this.item_Logout.Size = new System.Drawing.Size(197, 24);
             this.item_Logout.Text = "Đăng xuất";
             this.item_Logout.Click += new System.EventHandler(this.item_Logout_Click);
             // 

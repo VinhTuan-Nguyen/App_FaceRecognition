@@ -137,11 +137,11 @@
     <Compile Include="frm02_Gv_Note.designer.cs">
       <DependentUpon>frm02_Gv_Note.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm02_Gv_RollCall.cs">
+    <Compile Include="frm02_Gv_Summary.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm02_Gv_RollCall.Designer.cs">
-      <DependentUpon>frm02_Gv_RollCall.cs</DependentUpon>
+    <Compile Include="frm02_Gv_Summary.Designer.cs">
+      <DependentUpon>frm02_Gv_Summary.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -193,12 +193,6 @@
     <Compile Include="user2_Gv_History.Designer.cs">
       <DependentUpon>user2_Gv_History.cs</DependentUpon>
     </Compile>
-    <Compile Include="user2_Gv_Summary.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="user2_Gv_Summary.designer.cs">
-      <DependentUpon>user2_Gv_Summary.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="frm01_Qt_0Main.resx">
       <DependentUpon>frm01_Qt_0Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,8 +238,8 @@
     <EmbeddedResource Include="frm02_Gv_Note.resx">
       <DependentUpon>frm02_Gv_Note.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm02_Gv_RollCall.resx">
-      <DependentUpon>frm02_Gv_RollCall.cs</DependentUpon>
+    <EmbeddedResource Include="frm02_Gv_Summary.resx">
+      <DependentUpon>frm02_Gv_Summary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
