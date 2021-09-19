@@ -19,70 +19,52 @@ namespace App_DDSV
             InitializeComponent();
         }
 
-        private void item_LHP_Click(object sender, EventArgs e)
+        private void item_Class_Click(object sender, EventArgs e)
         {
-            if (!panel1.Controls.Contains(user1_Qt_Class.Instance))
-            {
-                panel1.Controls.Add(user1_Qt_Class.Instance);
-                user1_Qt_Class.Instance.Dock = DockStyle.Fill;
-                user1_Qt_Class.Instance.BringToFront();
-            }
-            else user1_Qt_Class.Instance.BringToFront();
+            user1_Qt_Class u = new user1_Qt_Class();
+            panel1.Controls.Add(u);
+            u.Dock = DockStyle.Fill;
+            u.BringToFront();
         }
 
-        private void item_ĐKHP_Click(object sender, EventArgs e)
+        private void item_ClassRegistration_Click(object sender, EventArgs e)
         {
-            if (!panel1.Controls.Contains(user1_Qt_ClassRegistration.Instance))
-            {
-                panel1.Controls.Add(user1_Qt_ClassRegistration.Instance);
-                user1_Qt_ClassRegistration.Instance.Dock = DockStyle.Fill;
-                user1_Qt_ClassRegistration.Instance.BringToFront();
-            }
-            else user1_Qt_ClassRegistration.Instance.BringToFront();
+            user1_Qt_ClassRegistration u = new user1_Qt_ClassRegistration();
+            panel1.Controls.Add(u);
+            u.Dock = DockStyle.Fill;
+            u.BringToFront();
         }
 
         private void item_Lecturers_Click(object sender, EventArgs e)
         {
-            if (!panel1.Controls.Contains(user1_Qt_Lecturers.Instance))
-            {
-                panel1.Controls.Add(user1_Qt_Lecturers.Instance);
-                user1_Qt_Lecturers.Instance.Dock = DockStyle.Fill;
-                user1_Qt_Lecturers.Instance.BringToFront();
-            }
-            else user1_Qt_Lecturers.Instance.BringToFront();
+            user1_Qt_Lecturers u = new user1_Qt_Lecturers();
+            panel1.Controls.Add(u);
+            u.Dock = DockStyle.Fill;
+            u.BringToFront();
         }
 
         private void item_Student_Click(object sender, EventArgs e)
         {
-            if (!panel1.Controls.Contains(user1_Qt_Student.Instance))
-            {
-                panel1.Controls.Add(user1_Qt_Student.Instance);
-                user1_Qt_Student.Instance.Dock = DockStyle.Fill;
-                user1_Qt_Student.Instance.BringToFront();
-            }
-            else user1_Qt_Student.Instance.BringToFront();
+            user1_Qt_Student u = new user1_Qt_Student();
+            panel1.Controls.Add(u);
+            u.Dock = DockStyle.Fill;
+            u.BringToFront();
         }
 
         public void item_Rollcall_Click(object sender, EventArgs e)
         {
-            if (!panel1.Controls.Contains(user1_Qt_Rollcall.Instance))
-            {
-                panel1.Controls.Add(user1_Qt_Rollcall.Instance);
-                user1_Qt_Rollcall.Instance.Dock = DockStyle.Fill;
-                user1_Qt_Rollcall.Instance.BringToFront();
-            }
-            else user1_Qt_Rollcall.Instance.BringToFront();
+            user1_Qt_Rollcall u = new user1_Qt_Rollcall();
+            panel1.Controls.Add(u);
+            u.Dock = DockStyle.Fill;
+            u.BringToFront();
         }
 
         private void item_Account_Click(object sender, EventArgs e)
         {
-            if (!panel1.Controls.Contains(user1_Qt_Account.Instance))
-            {
-                panel1.Controls.Add(user1_Qt_Account.Instance);
-                user1_Qt_Account.Instance.Dock = DockStyle.Fill;
-                user1_Qt_Account.Instance.BringToFront();
-            }
-            else user1_Qt_Account.Instance.BringToFront();
+            user1_Qt_Account u = new user1_Qt_Account();
+            panel1.Controls.Add(u);
+            u.Dock = DockStyle.Fill;
+            u.BringToFront();
         }
 
         private void item_UpdatePass_Click(object sender, EventArgs e)
@@ -125,12 +107,12 @@ namespace App_DDSV
 
         private void btn_qlHP_Click(object sender, EventArgs e)
         {
-            item_LHP_Click(sender, e);
+            item_Class_Click(sender, e);
         }
 
         private void btn_qlDKHP_Click(object sender, EventArgs e)
         {
-            item_ĐKHP_Click(sender, e);
+            item_ClassRegistration_Click(sender, e);
         }
 
         private void btn_qlSV_Click(object sender, EventArgs e)

@@ -13,16 +13,6 @@ namespace App_DDSV
 {
     public partial class user1_Qt_Lecturers : UserControl
     {
-        private static user1_Qt_Lecturers _instance;
-        public static user1_Qt_Lecturers Instance
-        {
-            get
-            {
-                if (_instance == null)
-                    _instance = new user1_Qt_Lecturers();
-                return _instance;
-            }
-        }
         public user1_Qt_Lecturers()
         {
             InitializeComponent();

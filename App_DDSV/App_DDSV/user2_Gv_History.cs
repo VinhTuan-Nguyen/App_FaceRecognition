@@ -13,19 +13,10 @@ namespace App_DDSV
 {
     public partial class user2_Gv_History : UserControl
     {
-        private static user2_Gv_History _instance;
         private static DataRow info;
-        DataSet data = new DataSet();
+        private static DataSet data = new DataSet();
 
-        public static user2_Gv_History Instance
-        {
-            get
-            {
-                if (_instance == null)
-                    _instance = new user2_Gv_History(info);
-                return _instance;
-            }
-        }
+
         public user2_Gv_History(DataRow row)
         {
             info = row;
@@ -49,6 +40,7 @@ namespace App_DDSV
                 cbb_MaHP.DisplayMember = "col_MaHP";
                 conSql.conn.Close();
             }
+            pick_End.Value = DateTime.Now;
         }
 
         private void cbb_MaHP_TextChanged(object sender, EventArgs e)
@@ -67,7 +59,8 @@ namespace App_DDSV
             {
                 conSql.query = "SELECT DISTINCT col_NgayDD FROM tab_DiemDanh " +
                     "WHERE col_MaHP = @mahp and " +
-                    "col_NgayDD BETWEEN @start and @end";
+                    "col_NgayDD BETWEEN @start and @end " +
+                    "ORDER BY col_NgayDD";
                 using(conSql.conn = new SqlConnection(conSql.conString))
                 {
                     conSql.conn.Open();
@@ -112,6 +105,24 @@ namespace App_DDSV
                 dgv_DataView.DataSource = data.Tables[0];
                 conSql.conn.Close();
             }
+        }
+
+        private void dgv_DataView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgv_DataView.Rows[e.RowIndex];
+                string MaSV = row.Cells["col_MaSV"].Value.ToString();
+                string Note = row.Cells["col_GhiChu"].Value.ToString();
+                string Time = row.Cells["col_GioDD"].Value.ToString();
+                frm02_Gv_Note f = new frm02_Gv_Note(cbb_List.Text, cbb_MaHP.Text, MaSV, Note, Time);
+                f.ShowDialog();
+            }
+        }
+
+        private void dgv_DataView_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        {
+            dgv_DataView["col_Stt", e.RowIndex].Value = (e.RowIndex < 9 ? "0" : "") + (e.RowIndex + 1);
         }
     }
 }

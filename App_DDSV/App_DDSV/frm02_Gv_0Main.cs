@@ -43,26 +43,18 @@ namespace App_DDSV
 
         private void item_ClassInfo_Click(object sender, EventArgs e)
         {
-            new user2_Gv_ClassInfo(info);
-            if (!panel1.Controls.Contains(user2_Gv_ClassInfo.Instance))
-            {
-                panel1.Controls.Add(user2_Gv_ClassInfo.Instance);
-                user2_Gv_ClassInfo.Instance.Dock = DockStyle.Fill;
-                user2_Gv_ClassInfo.Instance.BringToFront();
-            }
-            else user2_Gv_ClassInfo.Instance.BringToFront();
+            user2_Gv_ClassInfo u = new user2_Gv_ClassInfo(info);
+            panel1.Controls.Add(u);
+            u.Dock = DockStyle.Fill;
+            u.BringToFront();
         }
 
         private void item_History_Click(object sender, EventArgs e)
         {
-            if (!panel1.Controls.Contains(user2_Gv_History.Instance))
-            {
-                new user2_Gv_History(info);
-                panel1.Controls.Add(user2_Gv_History.Instance);
-                user2_Gv_History.Instance.Dock = DockStyle.Fill;
-                user2_Gv_History.Instance.BringToFront();
-            }
-            else user2_Gv_History.Instance.BringToFront();
+            user2_Gv_History u = new user2_Gv_History(info);
+            panel1.Controls.Add(u);
+            u.Dock = DockStyle.Fill;
+            u.BringToFront();
         }
 
         private void item_Help_Click(object sender, EventArgs e)
@@ -72,7 +64,7 @@ namespace App_DDSV
 
         private void item_Logout_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn Chắc Chắn Muốn Thoát Hệ Thống ?",
+            DialogResult result = MessageBox.Show("Xác Nhận Thoát Hệ Thống",
                 "Thoát Hệ Thống", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
             if (result == DialogResult.OK)

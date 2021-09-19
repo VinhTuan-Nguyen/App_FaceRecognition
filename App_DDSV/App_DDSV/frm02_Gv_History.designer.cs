@@ -227,14 +227,14 @@
             // pick_Search
             // 
             this.pick_Search.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pick_Search.CustomFormat = "dd - MM -yyyy";
+            this.pick_Search.CustomFormat = "dd - MM -yyyy HH:mm";
             this.pick_Search.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12.75F, System.Drawing.FontStyle.Bold);
             this.pick_Search.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.pick_Search.Location = new System.Drawing.Point(288, 69);
+            this.pick_Search.Location = new System.Drawing.Point(251, 69);
             this.pick_Search.Name = "pick_Search";
-            this.pick_Search.Size = new System.Drawing.Size(177, 28);
+            this.pick_Search.Size = new System.Drawing.Size(214, 28);
             this.pick_Search.TabIndex = 14;
-            this.pick_Search.Value = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
+            this.pick_Search.Value = new System.DateTime(2021, 1, 1, 12, 0, 0, 0);
             // 
             // frm02_Gv_History
             // 

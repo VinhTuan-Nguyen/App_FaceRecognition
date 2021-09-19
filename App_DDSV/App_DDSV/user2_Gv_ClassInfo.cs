@@ -16,18 +16,6 @@ namespace App_DDSV
     {
 
         private static DataRow info;
-        private static DataGridViewColumn Column;
-        private static user2_Gv_ClassInfo _instance;
-
-        public static user2_Gv_ClassInfo Instance
-        {
-            get
-            {
-                if (_instance == null)
-                    _instance = new user2_Gv_ClassInfo(info);
-                return _instance;
-            }
-        }
 
         public user2_Gv_ClassInfo(DataRow row)
         {
@@ -70,10 +58,14 @@ namespace App_DDSV
             {
                 Process process = new Process();
                 process.StartInfo.FileName = @"UI_Camera.exe";
-                process.StartInfo.Arguments = txt_MaHP.Text + " " + lb_MaGV.Text + " " + now;
+                process.StartInfo.Arguments =
+                    txt_MaHP.Text + " " + "\"" +
+                    txt_TenHP.Text + "\"" + " " +
+                    lb_MaGV.Text + " " + "\"" +
+                    now.ToString("yyyy-MM-dd HH:mm") + "\"";
                 process.Start();
                 process.WaitForExit();
-                frm02_Gv_Summary f = new frm02_Gv_Summary(txt_MaHP.Text, txt_TenHP.Text, now.ToString());
+                frm02_Gv_Summary f = new frm02_Gv_Summary(txt_MaHP.Text, txt_TenHP.Text, now.ToString("yyyy-MM-dd HH:mm"));
                 f.ShowDialog();
             }
 
@@ -83,6 +75,8 @@ namespace App_DDSV
         private void btn_ViewClass_Click(object sender, EventArgs e)
         {
             DataSet data = new DataSet();
+            int CPhep = 0;
+            int KPhep = 0;
             using (conSql.conn = new SqlConnection(conSql.conString))
             {
                 conSql.conn.Open();
@@ -105,8 +99,7 @@ namespace App_DDSV
                 txt_TrangThai.Text = "Mở Lớp";
             }
             else txt_TrangThai.Text = "Đã Hoàn Tất";
-            int CPhep = 0;
-            int KPhep = 0;
+
             foreach (DataRow item in data.Tables[2].Rows)
             {
                 if (item.Field<string>("col_GhiChu") == "Có Phép")
@@ -118,7 +111,6 @@ namespace App_DDSV
             txt_TongSV.Text = dgv_LoadData.Rows.Count.ToString();
             txt_CP.Text = CPhep.ToString();
             txt_KP.Text = KPhep.ToString();
-            Column = dgv_LoadData.Columns[1];
         }
 
         private void dgv_LoadData_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

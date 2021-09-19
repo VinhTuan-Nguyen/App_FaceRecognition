@@ -36,8 +36,8 @@ namespace App_DDSV
             this.item_LogOut = new System.Windows.Forms.ToolStripMenuItem();
             this.item_Help = new System.Windows.Forms.ToolStripMenuItem();
             this.lớpHọcPhầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.item_LHP = new System.Windows.Forms.ToolStripMenuItem();
-            this.item_ĐKHP = new System.Windows.Forms.ToolStripMenuItem();
+            this.item_Class = new System.Windows.Forms.ToolStripMenuItem();
+            this.item_ClassRegistration = new System.Windows.Forms.ToolStripMenuItem();
             this.item_Lecturers = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýNhânSựToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sinhViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -125,27 +125,27 @@ namespace App_DDSV
             // lớpHọcPhầnToolStripMenuItem
             // 
             this.lớpHọcPhầnToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.item_LHP,
-            this.item_ĐKHP});
+            this.item_Class,
+            this.item_ClassRegistration});
             this.lớpHọcPhầnToolStripMenuItem.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lớpHọcPhầnToolStripMenuItem.ForeColor = System.Drawing.Color.MediumBlue;
             this.lớpHọcPhầnToolStripMenuItem.Name = "lớpHọcPhầnToolStripMenuItem";
             this.lớpHọcPhầnToolStripMenuItem.Size = new System.Drawing.Size(121, 23);
             this.lớpHọcPhầnToolStripMenuItem.Text = "Lớp Học Phần";
             // 
-            // item_LHP
+            // item_Class
             // 
-            this.item_LHP.Name = "item_LHP";
-            this.item_LHP.Size = new System.Drawing.Size(224, 24);
-            this.item_LHP.Text = "Quản Lý Học Phần";
-            this.item_LHP.Click += new System.EventHandler(this.item_LHP_Click);
+            this.item_Class.Name = "item_Class";
+            this.item_Class.Size = new System.Drawing.Size(224, 24);
+            this.item_Class.Text = "Quản Lý Học Phần";
+            this.item_Class.Click += new System.EventHandler(this.item_Class_Click);
             // 
-            // item_ĐKHP
+            // item_ClassRegistration
             // 
-            this.item_ĐKHP.Name = "item_ĐKHP";
-            this.item_ĐKHP.Size = new System.Drawing.Size(224, 24);
-            this.item_ĐKHP.Text = "Quản Lý Đăng Kí HP";
-            this.item_ĐKHP.Click += new System.EventHandler(this.item_ĐKHP_Click);
+            this.item_ClassRegistration.Name = "item_ClassRegistration";
+            this.item_ClassRegistration.Size = new System.Drawing.Size(224, 24);
+            this.item_ClassRegistration.Text = "Quản Lý Đăng Kí HP";
+            this.item_ClassRegistration.Click += new System.EventHandler(this.item_ClassRegistration_Click);
             // 
             // item_Lecturers
             // 
@@ -414,8 +414,8 @@ namespace App_DDSV
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem lớpHọcPhầnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem item_LHP;
-        private System.Windows.Forms.ToolStripMenuItem item_ĐKHP;
+        private System.Windows.Forms.ToolStripMenuItem item_Class;
+        private System.Windows.Forms.ToolStripMenuItem item_ClassRegistration;
         private System.Windows.Forms.ToolStripMenuItem item_Lecturers;
         private System.Windows.Forms.ToolStripMenuItem quảnLýNhânSựToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sinhViênToolStripMenuItem;

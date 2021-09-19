@@ -621,18 +621,299 @@
   ('multiprocessing',
    'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\multiprocessing\\__init__.py',
    'PYMODULE'),
-  ('tracemalloc',
-   'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\tracemalloc.py',
+  ('_py_abc',
+   'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\_py_abc.py',
    'PYMODULE'),
   ('stringprep',
    'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\stringprep.py',
    'PYMODULE'),
-  ('_py_abc',
-   'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\_py_abc.py',
+  ('tracemalloc',
+   'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\tracemalloc.py',
    'PYMODULE'),
-  ('cv2',
+  ('tkinter',
+   'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\tkinter\\__init__.py',
+   'PYMODULE'),
+  ('tkinter.constants',
+   'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\tkinter\\constants.py',
+   'PYMODULE'),
+  ('tkinter.messagebox',
+   'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\tkinter\\messagebox.py',
+   'PYMODULE'),
+  ('tkinter.commondialog',
+   'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\tkinter\\commondialog.py',
+   'PYMODULE'),
+  ('PIL.ImageTk',
+   'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\ImageTk.py',
+   'PYMODULE'),
+  ('PIL',
    'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\cv2\\__init__.py',
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\__init__.py',
+   'PYMODULE'),
+  ('PIL.features',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\features.py',
+   'PYMODULE'),
+  ('PIL.PdfParser',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\PdfParser.py',
+   'PYMODULE'),
+  ('PIL.ImageShow',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\ImageShow.py',
+   'PYMODULE'),
+  ('PIL.ImageQt',
+   'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\ImageQt.py',
+   'PYMODULE'),
+  ('PIL._util',
+   'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\_util.py',
+   'PYMODULE'),
+  ('PIL.ImageFilter',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\ImageFilter.py',
+   'PYMODULE'),
+  ('PIL.PyAccess',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\PyAccess.py',
+   'PYMODULE'),
+  ('PIL.PngImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\PngImagePlugin.py',
+   'PYMODULE'),
+  ('PIL._binary',
+   'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\_binary.py',
+   'PYMODULE'),
+  ('PIL.PpmImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\PpmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.JpegImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\JpegImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MpoImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\MpoImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.JpegPresets',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\JpegPresets.py',
+   'PYMODULE'),
+  ('PIL.TiffImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\TiffImagePlugin.py',
+   'PYMODULE'),
+  ('fractions',
+   'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\fractions.py',
+   'PYMODULE'),
+  ('PIL.GifImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\GifImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ImageSequence',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\ImageSequence.py',
+   'PYMODULE'),
+  ('PIL.ImageChops',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\ImageChops.py',
+   'PYMODULE'),
+  ('PIL.BmpImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\BmpImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ImagePalette',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\ImagePalette.py',
+   'PYMODULE'),
+  ('PIL.PaletteFile',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\PaletteFile.py',
+   'PYMODULE'),
+  ('PIL.ImageColor',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\ImageColor.py',
+   'PYMODULE'),
+  ('colorsys',
+   'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\colorsys.py',
+   'PYMODULE'),
+  ('PIL.GimpPaletteFile',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\GimpPaletteFile.py',
+   'PYMODULE'),
+  ('PIL.GimpGradientFile',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\GimpGradientFile.py',
+   'PYMODULE'),
+  ('PIL.ImageFile',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\ImageFile.py',
+   'PYMODULE'),
+  ('PIL.TiffTags',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\TiffTags.py',
+   'PYMODULE'),
+  ('PIL.ImageMode',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\ImageMode.py',
+   'PYMODULE'),
+  ('PIL._version',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\_version.py',
+   'PYMODULE'),
+  ('PIL.Image',
+   'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\Image.py',
+   'PYMODULE'),
+  ('PIL.TgaImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\TgaImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.DcxImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\DcxImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.XpmImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\XpmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.FitsStubImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\FitsStubImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.IcnsImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\IcnsImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PalmImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\PalmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ImtImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\ImtImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.SpiderImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\SpiderImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ImImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\ImImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.FpxImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\FpxImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MicImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\MicImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.FtexImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\FtexImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.CurImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\CurImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.BufrStubImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\BufrStubImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.IptcImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\IptcImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.XbmImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\XbmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.WmfImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\WmfImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PcxImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\PcxImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.IcoImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\IcoImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PcdImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\PcdImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.WebPImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\WebPImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.DdsImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\DdsImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.McIdasImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\McIdasImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.Hdf5StubImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\Hdf5StubImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PixarImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\PixarImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PdfImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\PdfImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.SgiImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\SgiImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MpegImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\MpegImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.GbrImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\GbrImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.GribStubImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\GribStubImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.Jpeg2KImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\Jpeg2KImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.SunImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\SunImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.EpsImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\EpsImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PsdImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\PsdImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.BlpImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\BlpImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.FliImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\FliImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.XVThumbImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\XVThumbImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MspImagePlugin',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\MspImagePlugin.py',
    'PYMODULE'),
   ('numpy',
    'c:\\users\\ha '
@@ -1005,301 +1286,20 @@
    'c:\\users\\ha '
    'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\numpy\\_globals.py',
    'PYMODULE'),
+  ('datetime',
+   'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\datetime.py',
+   'PYMODULE'),
+  ('hashlib',
+   'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\hashlib.py',
+   'PYMODULE'),
+  ('cv2',
+   'c:\\users\\ha '
+   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\cv2\\__init__.py',
+   'PYMODULE'),
   ('cv2.version',
    'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\site-packages\\cv2\\version.py',
    'PYMODULE'),
   ('cv2.data',
    'c:\\users\\ha '
    'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\cv2\\data\\__init__.py',
-   'PYMODULE'),
-  ('PIL.ImageTk',
-   'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\ImageTk.py',
-   'PYMODULE'),
-  ('PIL',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\__init__.py',
-   'PYMODULE'),
-  ('PIL.PdfParser',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\PdfParser.py',
-   'PYMODULE'),
-  ('PIL.Jpeg2KImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\Jpeg2KImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.features',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\features.py',
-   'PYMODULE'),
-  ('PIL.ImageShow',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\ImageShow.py',
-   'PYMODULE'),
-  ('PIL.ImageQt',
-   'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\ImageQt.py',
-   'PYMODULE'),
-  ('PIL._util',
-   'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\_util.py',
-   'PYMODULE'),
-  ('PIL.ImageFilter',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\ImageFilter.py',
-   'PYMODULE'),
-  ('PIL.PyAccess',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\PyAccess.py',
-   'PYMODULE'),
-  ('PIL.PngImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\PngImagePlugin.py',
-   'PYMODULE'),
-  ('PIL._binary',
-   'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\_binary.py',
-   'PYMODULE'),
-  ('PIL.PpmImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\PpmImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.JpegImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\JpegImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.MpoImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\MpoImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.JpegPresets',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\JpegPresets.py',
-   'PYMODULE'),
-  ('PIL.TiffImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\TiffImagePlugin.py',
-   'PYMODULE'),
-  ('fractions',
-   'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\fractions.py',
-   'PYMODULE'),
-  ('PIL.GifImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\GifImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.ImageSequence',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\ImageSequence.py',
-   'PYMODULE'),
-  ('PIL.ImageChops',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\ImageChops.py',
-   'PYMODULE'),
-  ('PIL.BmpImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\BmpImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.ImagePalette',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\ImagePalette.py',
-   'PYMODULE'),
-  ('PIL.PaletteFile',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\PaletteFile.py',
-   'PYMODULE'),
-  ('PIL.ImageColor',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\ImageColor.py',
-   'PYMODULE'),
-  ('colorsys',
-   'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\colorsys.py',
-   'PYMODULE'),
-  ('PIL.GimpPaletteFile',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\GimpPaletteFile.py',
-   'PYMODULE'),
-  ('PIL.GimpGradientFile',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\GimpGradientFile.py',
-   'PYMODULE'),
-  ('PIL.ImageFile',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\ImageFile.py',
-   'PYMODULE'),
-  ('PIL.TiffTags',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\TiffTags.py',
-   'PYMODULE'),
-  ('PIL.ImageMode',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\ImageMode.py',
-   'PYMODULE'),
-  ('PIL._version',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\_version.py',
-   'PYMODULE'),
-  ('PIL.Image',
-   'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\Image.py',
-   'PYMODULE'),
-  ('PIL.ImtImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\ImtImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.PdfImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\PdfImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.GribStubImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\GribStubImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.PixarImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\PixarImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.PalmImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\PalmImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.EpsImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\EpsImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.PcxImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\PcxImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.WmfImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\WmfImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.DdsImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\DdsImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.IptcImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\IptcImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.DcxImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\DcxImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.McIdasImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\McIdasImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.PsdImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\PsdImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.SpiderImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\SpiderImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.IcnsImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\IcnsImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.Hdf5StubImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\Hdf5StubImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.FliImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\FliImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.BlpImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\BlpImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.MicImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\MicImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.IcoImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\IcoImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.SunImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\SunImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.FtexImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\FtexImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.XbmImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\XbmImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.MspImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\MspImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.ImImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\ImImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.TgaImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\TgaImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.FpxImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\FpxImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.CurImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\CurImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.XpmImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\XpmImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.WebPImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\WebPImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.GbrImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\GbrImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.BufrStubImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\BufrStubImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.SgiImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\SgiImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.PcdImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\PcdImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.FitsStubImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\FitsStubImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.MpegImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\MpegImagePlugin.py',
-   'PYMODULE'),
-  ('PIL.XVThumbImagePlugin',
-   'c:\\users\\ha '
-   'ma\\anaconda3\\envs\\ml\\lib\\site-packages\\PIL\\XVThumbImagePlugin.py',
-   'PYMODULE'),
-  ('tkinter.messagebox',
-   'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\tkinter\\messagebox.py',
-   'PYMODULE'),
-  ('tkinter.commondialog',
-   'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\tkinter\\commondialog.py',
-   'PYMODULE'),
-  ('tkinter',
-   'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\tkinter\\__init__.py',
-   'PYMODULE'),
-  ('tkinter.constants',
-   'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\tkinter\\constants.py',
-   'PYMODULE'),
-  ('hashlib',
-   'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\hashlib.py',
-   'PYMODULE'),
-  ('datetime',
-   'c:\\users\\ha ma\\anaconda3\\envs\\ml\\lib\\datetime.py',
    'PYMODULE')])

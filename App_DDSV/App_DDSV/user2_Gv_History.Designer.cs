@@ -29,7 +29,7 @@ namespace App_DDSV
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -113,6 +113,7 @@ namespace App_DDSV
             this.txt_TenHP.Name = "txt_TenHP";
             this.txt_TenHP.Size = new System.Drawing.Size(362, 27);
             this.txt_TenHP.TabIndex = 4;
+            this.txt_TenHP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_View
             // 
@@ -139,7 +140,7 @@ namespace App_DDSV
             // cbb_List
             // 
             this.cbb_List.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbb_List.FormatString = "yyyy-MM-dd HH:mm:ss";
+            this.cbb_List.FormatString = "yyyy-MM-dd HH:mm";
             this.cbb_List.FormattingEnabled = true;
             this.cbb_List.Location = new System.Drawing.Point(1281, 65);
             this.cbb_List.Name = "cbb_List";
@@ -208,7 +209,7 @@ namespace App_DDSV
             // 
             // pick_Start
             // 
-            this.pick_Start.CustomFormat = "dd - MM - yyyy HH:mm:ss";
+            this.pick_Start.CustomFormat = "dd - MM - yyyy HH:mm";
             this.pick_Start.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pick_Start.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.pick_Start.Location = new System.Drawing.Point(59, 66);
@@ -219,7 +220,7 @@ namespace App_DDSV
             // 
             // pick_End
             // 
-            this.pick_End.CustomFormat = "dd - MM - yyyy HH:mm:ss";
+            this.pick_End.CustomFormat = "dd - MM - yyyy HH:mm";
             this.pick_End.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pick_End.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.pick_End.Location = new System.Drawing.Point(326, 66);
@@ -248,14 +249,14 @@ namespace App_DDSV
             this.dgv_DataView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_DataView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_DataView.BackgroundColor = System.Drawing.Color.Lavender;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_DataView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_DataView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_DataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DataView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_Stt,
@@ -273,6 +274,8 @@ namespace App_DDSV
             this.dgv_DataView.RowHeadersVisible = false;
             this.dgv_DataView.Size = new System.Drawing.Size(1918, 832);
             this.dgv_DataView.TabIndex = 1;
+            this.dgv_DataView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DataView_CellDoubleClick);
+            this.dgv_DataView.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgv_DataView_RowPrePaint);
             // 
             // col_Stt
             // 
@@ -344,7 +347,7 @@ namespace App_DDSV
             this.col_GhiChu.DataPropertyName = "col_GhiChu";
             this.col_GhiChu.HeaderText = "Ghi Chú";
             this.col_GhiChu.Name = "col_GhiChu";
-            this.col_GhiChu.Width = 200;
+            this.col_GhiChu.Width = 400;
             // 
             // user2_Gv_History
             // 
