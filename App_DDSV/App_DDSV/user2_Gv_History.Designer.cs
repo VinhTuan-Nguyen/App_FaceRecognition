@@ -29,7 +29,10 @@ namespace App_DDSV
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -98,26 +101,29 @@ namespace App_DDSV
             this.groupBox2.Controls.Add(this.pick_Start);
             this.groupBox2.Controls.Add(this.pick_End);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox2.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.MediumBlue;
             this.groupBox2.Location = new System.Drawing.Point(0, 70);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1924, 113);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Công Cụ";
+            this.groupBox2.Text = "TÌM KIẾM";
             // 
             // txt_TenHP
             // 
             this.txt_TenHP.Enabled = false;
-            this.txt_TenHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TenHP.Font = new System.Drawing.Font("Bahnschrift Light", 12.75F);
             this.txt_TenHP.Location = new System.Drawing.Point(720, 66);
             this.txt_TenHP.Name = "txt_TenHP";
-            this.txt_TenHP.Size = new System.Drawing.Size(362, 27);
+            this.txt_TenHP.Size = new System.Drawing.Size(362, 28);
             this.txt_TenHP.TabIndex = 4;
             this.txt_TenHP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_View
             // 
-            this.btn_View.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_View.Font = new System.Drawing.Font("Constantia", 12.75F, System.Drawing.FontStyle.Italic);
+            this.btn_View.ForeColor = System.Drawing.Color.Black;
             this.btn_View.Location = new System.Drawing.Point(1731, 19);
             this.btn_View.Name = "btn_View";
             this.btn_View.Size = new System.Drawing.Size(127, 74);
@@ -128,7 +134,8 @@ namespace App_DDSV
             // 
             // btn_GetList
             // 
-            this.btn_GetList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_GetList.Font = new System.Drawing.Font("Constantia", 12.75F, System.Drawing.FontStyle.Italic);
+            this.btn_GetList.ForeColor = System.Drawing.Color.Black;
             this.btn_GetList.Location = new System.Drawing.Point(1118, 19);
             this.btn_GetList.Name = "btn_GetList";
             this.btn_GetList.Size = new System.Drawing.Size(127, 74);
@@ -139,93 +146,98 @@ namespace App_DDSV
             // 
             // cbb_List
             // 
-            this.cbb_List.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbb_List.Font = new System.Drawing.Font("Bahnschrift Light", 12.75F);
             this.cbb_List.FormatString = "yyyy-MM-dd HH:mm";
             this.cbb_List.FormattingEnabled = true;
             this.cbb_List.Location = new System.Drawing.Point(1281, 65);
             this.cbb_List.Name = "cbb_List";
-            this.cbb_List.Size = new System.Drawing.Size(414, 28);
+            this.cbb_List.Size = new System.Drawing.Size(414, 29);
             this.cbb_List.TabIndex = 2;
             // 
             // cbb_MaHP
             // 
-            this.cbb_MaHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbb_MaHP.Font = new System.Drawing.Font("Bahnschrift Light", 12.75F);
             this.cbb_MaHP.FormattingEnabled = true;
             this.cbb_MaHP.Location = new System.Drawing.Point(720, 19);
             this.cbb_MaHP.Name = "cbb_MaHP";
-            this.cbb_MaHP.Size = new System.Drawing.Size(181, 28);
+            this.cbb_MaHP.Size = new System.Drawing.Size(181, 29);
             this.cbb_MaHP.TabIndex = 2;
             this.cbb_MaHP.TextChanged += new System.EventHandler(this.cbb_MaHP_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Constantia", 12.75F, System.Drawing.FontStyle.Italic);
+            this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(1281, 43);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(260, 20);
+            this.label6.Size = new System.Drawing.Size(250, 21);
             this.label6.TabIndex = 1;
             this.label6.Text = "Danh Sách Các Buổi Điểm Danh:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Constantia", 12.75F, System.Drawing.FontStyle.Italic);
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(593, 69);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(121, 20);
+            this.label5.Size = new System.Drawing.Size(115, 21);
             this.label5.TabIndex = 1;
             this.label5.Text = "Tên Học Phần:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Constantia", 12.75F, System.Drawing.FontStyle.Italic);
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(598, 23);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 20);
+            this.label4.Size = new System.Drawing.Size(113, 21);
             this.label4.TabIndex = 1;
             this.label4.Text = "Mã Học Phần:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Constantia", 12.75F, System.Drawing.FontStyle.Italic);
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(326, 44);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 20);
+            this.label3.Size = new System.Drawing.Size(86, 21);
             this.label3.TabIndex = 1;
             this.label3.Text = "Đến Ngày:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Constantia", 12.75F, System.Drawing.FontStyle.Italic);
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(59, 44);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 20);
+            this.label2.Size = new System.Drawing.Size(76, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "Từ Ngày:";
             // 
             // pick_Start
             // 
             this.pick_Start.CustomFormat = "dd - MM - yyyy HH:mm";
-            this.pick_Start.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pick_Start.Font = new System.Drawing.Font("Bahnschrift Light", 12.75F);
             this.pick_Start.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.pick_Start.Location = new System.Drawing.Point(59, 66);
             this.pick_Start.Name = "pick_Start";
-            this.pick_Start.Size = new System.Drawing.Size(231, 27);
+            this.pick_Start.Size = new System.Drawing.Size(231, 28);
             this.pick_Start.TabIndex = 0;
             this.pick_Start.Value = new System.DateTime(2021, 9, 12, 0, 0, 0, 0);
             // 
             // pick_End
             // 
             this.pick_End.CustomFormat = "dd - MM - yyyy HH:mm";
-            this.pick_End.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pick_End.Font = new System.Drawing.Font("Bahnschrift Light", 12.75F);
             this.pick_End.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.pick_End.Location = new System.Drawing.Point(326, 66);
             this.pick_End.Name = "pick_End";
-            this.pick_End.Size = new System.Drawing.Size(231, 27);
+            this.pick_End.Size = new System.Drawing.Size(231, 28);
             this.pick_End.TabIndex = 0;
             this.pick_End.Value = new System.DateTime(2021, 9, 15, 0, 0, 0, 0);
             // 
@@ -234,29 +246,37 @@ namespace App_DDSV
             this.groupBox1.BackColor = System.Drawing.Color.Lavender;
             this.groupBox1.Controls.Add(this.dgv_DataView);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.ForeColor = System.Drawing.Color.MediumBlue;
             this.groupBox1.Location = new System.Drawing.Point(0, 183);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1924, 851);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Danh Sách Điểm Danh";
+            this.groupBox1.Text = "DANH SÁCH ĐIỂM DANH";
             // 
             // dgv_DataView
             // 
             this.dgv_DataView.AllowUserToAddRows = false;
             this.dgv_DataView.AllowUserToDeleteRows = false;
             this.dgv_DataView.AllowUserToResizeRows = false;
-            this.dgv_DataView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Lavender;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.MediumBlue;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MediumBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Lavender;
+            this.dgv_DataView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_DataView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_DataView.BackgroundColor = System.Drawing.Color.Lavender;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_DataView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_DataView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_DataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DataView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_Stt,
@@ -268,11 +288,26 @@ namespace App_DDSV
             this.col_GioiTinh,
             this.col_GioDD,
             this.col_GhiChu});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.MediumBlue;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_DataView.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_DataView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_DataView.Location = new System.Drawing.Point(3, 16);
+            this.dgv_DataView.Location = new System.Drawing.Point(3, 27);
             this.dgv_DataView.Name = "dgv_DataView";
             this.dgv_DataView.RowHeadersVisible = false;
-            this.dgv_DataView.Size = new System.Drawing.Size(1918, 832);
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.MediumBlue;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.MediumBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Lavender;
+            this.dgv_DataView.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_DataView.Size = new System.Drawing.Size(1918, 821);
             this.dgv_DataView.TabIndex = 1;
             this.dgv_DataView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DataView_CellDoubleClick);
             this.dgv_DataView.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgv_DataView_RowPrePaint);

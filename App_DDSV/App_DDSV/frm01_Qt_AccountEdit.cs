@@ -21,7 +21,7 @@ namespace App_DDSV
             txt_Pass.Text = row.Cells["col_Password"].Value.ToString();
             if (txt_UserID.Text == "root")
             {
-                btn_Edit.Enabled = false;
+                btn_Save.Enabled = false;
                 btn_Delete.Enabled = false;
                 btn_ResetPass.Enabled = false;
             }
@@ -39,7 +39,7 @@ namespace App_DDSV
         {
             string query = @"UPDATE tab_Login SET col_Password = '781e5e245d69b566979b86e28d23f2c7' WHERE col_User = @user";
 
-            DialogResult result = MessageBox.Show("Xác Nhận Reset Password !", "Reset Password",
+            DialogResult result = MessageBox.Show("Xác Nhận Reset Password !", "Thông Báo",
                 MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if(result == DialogResult.OK)
             {
@@ -57,12 +57,12 @@ namespace App_DDSV
             }
         }
 
-        private void btn_Edit_Click(object sender, EventArgs e)
+        private void btn_Save_Click(object sender, EventArgs e)
         {
             string role = ra_Admin.Checked ? "admin" : "user";
             conSql.query = @"UPDATE tab_Login SET col_Role = @role WHERE col_User = @user";
 
-            DialogResult result = MessageBox.Show("Xác Nhận Chỉnh Sửa !", "Chỉnh Sửa",
+            DialogResult result = MessageBox.Show("Xác Nhận Lưu !", "Thông Báo",
                 MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (result == DialogResult.OK)
             {
@@ -73,7 +73,7 @@ namespace App_DDSV
                     conSql.cmd.Parameters.AddWithValue("@user", txt_UserID.Text);
                     conSql.cmd.Parameters.AddWithValue("@role", role);
                     conSql.cmd.ExecuteNonQuery();
-                    MessageBox.Show("Hoàn Tất Chỉnh Sửa !", "Thành Công",
+                    MessageBox.Show("Lưu Thành Công!", "Thành Công",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                     conSql.conn.Close();
@@ -81,7 +81,7 @@ namespace App_DDSV
             }
         }
 
-        private void btn_Exit_Click(object sender, EventArgs e)
+        private void btn_Back_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -107,6 +107,26 @@ namespace App_DDSV
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
+        }
+
+        private void btn_ResetPass_MouseHover(object sender, EventArgs e)
+        {
+            btn_ResetPass.ForeColor = Color.YellowGreen;
+        }
+
+        private void btn_ResetPass_MouseLeave(object sender, EventArgs e)
+        {
+            btn_ResetPass.ForeColor = Color.DarkGreen;
+        }
+
+        private void btn_Back_MouseHover(object sender, EventArgs e)
+        {
+            btn_Back.ForeColor = Color.OrangeRed;
+        }
+
+        private void btn_Back_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Back.ForeColor = Color.Brown;
         }
     }
 }

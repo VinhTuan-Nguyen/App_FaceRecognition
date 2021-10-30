@@ -242,7 +242,7 @@ namespace App_DDSV
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(138, 20);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Mã Số Sinh VIên:";
+            this.label4.Text = "Mã Số Sinh Viên:";
             // 
             // label7
             // 

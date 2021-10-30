@@ -39,7 +39,7 @@ namespace App_DDSV
                 case "Vắng":
                     ra_Vang.Checked = true;
                     break;
-                case "Phép":
+                case "C.Phép":
                     ra_Phep.Checked = true;
                     break;
                 default:
@@ -59,7 +59,7 @@ namespace App_DDSV
             }
             else if (ra_Phep.Checked == true)
             {
-                txt_GhiChu.Text = "Phép";
+                txt_GhiChu.Text = "C.Phép";
                 txt_GhiChu.Enabled = false;
             }
             else if (ra_Vang.Checked == true)

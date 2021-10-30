@@ -31,7 +31,7 @@ namespace App_DDSV
 
         private void btn_Exit_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Chắc Chắn Bạn Muốn Thoát ?", "Thông Báo",
+            DialogResult result = MessageBox.Show("Xác Nhận Thoát Hệ Thống ?", "Thông Báo",
                 MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if(result == DialogResult.OK)
             {
@@ -103,14 +103,6 @@ namespace App_DDSV
             }
         }
 
-        private void txt_User_KeyDown(object sender, KeyEventArgs e)
-        {
-            if(e.KeyCode == Keys.Enter)
-            {
-                txt_Pasword.Focus();
-            }
-        }
-
         private void txt_Pasword_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -143,6 +135,26 @@ namespace App_DDSV
                 str += b.ToString("x");
             }
             return str;
+        }
+
+        private void btn_Login_MouseHover(object sender, EventArgs e)
+        {
+            btn_Login.ForeColor = Color.YellowGreen;
+        }
+
+        private void btn_Login_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Login.ForeColor = Color.DarkGreen;
+        }
+
+        private void btn_Exit_MouseHover(object sender, EventArgs e)
+        {
+            btn_Exit.ForeColor = Color.OrangeRed;
+        }
+
+        private void btn_Exit_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Exit.ForeColor = Color.Brown;
         }
     }
 }

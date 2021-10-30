@@ -21,7 +21,7 @@ namespace App_DDSV
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm00_LOGIN());
+            Application.Run(new frm01_Qt_0Main("AD12345678"));
         }
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]

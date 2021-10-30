@@ -127,5 +127,25 @@ namespace App_DDSV
             }
             return str;
         }
+
+        private void btn_Back_MouseHover(object sender, EventArgs e)
+        {
+            btn_Back.ForeColor = Color.OrangeRed;
+        }
+
+        private void btn_Back_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Back.ForeColor = Color.Brown;
+        }
+
+        private void btn_OK_MouseHover(object sender, EventArgs e)
+        {
+            btn_OK.ForeColor = Color.YellowGreen;
+        }
+
+        private void btn_OK_MouseLeave(object sender, EventArgs e)
+        {
+            btn_OK.ForeColor = Color.DarkGreen;
+        }
     }
 }

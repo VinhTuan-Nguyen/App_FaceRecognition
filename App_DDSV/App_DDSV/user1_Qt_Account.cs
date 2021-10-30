@@ -35,7 +35,7 @@ namespace App_DDSV
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi Không Mong Muốn !\nThông Tin Lỗi:\n"
+                    MessageBox.Show("Lỗi !!!!!\nThông Tin Lỗi:\n"
                         + ex.Message, "Lỗi Kết Nối", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 conSql.conn.Close();
@@ -74,7 +74,7 @@ namespace App_DDSV
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Lỗi Không Mong Muốn !\nThông Tin Lỗi:\n"
+                        MessageBox.Show("Lỗi !!!!!\nThông Tin Lỗi:\n"
                             + ex.Message, "Lỗi Kết Nối", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     conSql.conn.Close();
@@ -88,8 +88,8 @@ namespace App_DDSV
 
             if (txt_UserID.Text != "" && role != "")
             {
-                DialogResult result = MessageBox.Show("Xác Nhận Thêm User Mới Vào Cơ Sở Dữ Liệu. ?\nUser ID: "
-                    + txt_UserID.Text + "\tQuyền: " + role, "Xác Nhận Thêm Mới",
+                DialogResult result = MessageBox.Show("Xác Nhận Thêm Mới User ID Này ?\nUser ID: "
+                    + txt_UserID.Text + "\tQuyền: " + role, "Thông Báo",
                     MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
                 if (result == DialogResult.OK)
@@ -118,7 +118,7 @@ namespace App_DDSV
                                 conSql.cmd.Parameters.AddWithValue("@role", role);
                                 conSql.cmd.ExecuteNonQuery();
                                 user1_Qt_Account_Load(sender, e);
-                                MessageBox.Show("Đã Thêm Vào Cơ Sở Dữ Liệu !", "Thêm Thành Công",
+                                MessageBox.Show("Thêm Thành Công!", "Thông Báo",
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                             catch (Exception ex)
@@ -128,7 +128,7 @@ namespace App_DDSV
                         }
                         else
                         {
-                            MessageBox.Show("Đã Có User ID Này Trong Cơ Sở Dữ Liệu", "Không Thể Thêm",
+                            MessageBox.Show("Đã Có User ID Này, Không Thể Thêm !", "Thông Báo",
                                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         conSql.conn.Close();
@@ -137,7 +137,7 @@ namespace App_DDSV
             }
             else
             {
-                MessageBox.Show("Thiếu Thông Tin User.", "Không Khởi Tạo User", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("User ID Rỗng !", "Lỗi !!!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

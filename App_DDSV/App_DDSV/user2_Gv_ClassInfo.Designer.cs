@@ -77,8 +77,8 @@ namespace App_DDSV
             this.col_HoLot = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Lop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_GioiTinh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.col_Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -604,7 +604,6 @@ namespace App_DDSV
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MediumBlue;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Lavender;
             this.dgv_LoadData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_LoadData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader;
             this.dgv_LoadData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_LoadData.BackgroundColor = System.Drawing.Color.Lavender;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -622,14 +621,14 @@ namespace App_DDSV
             this.col_HoLot,
             this.col_Ten,
             this.col_Lop,
-            this.col_Email,
-            this.col_GioiTinh});
+            this.col_GioiTinh,
+            this.col_Email});
             this.dgv_LoadData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_LoadData.Location = new System.Drawing.Point(3, 29);
             this.dgv_LoadData.Name = "dgv_LoadData";
             this.dgv_LoadData.RowHeadersVisible = false;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Lavender;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightSteelBlue;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift Light SemiCondensed", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.MediumBlue;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumBlue;
@@ -679,20 +678,20 @@ namespace App_DDSV
             this.col_Lop.Name = "col_Lop";
             this.col_Lop.Width = 120;
             // 
+            // col_GioiTinh
+            // 
+            this.col_GioiTinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.col_GioiTinh.DataPropertyName = "col_GioiTinh";
+            this.col_GioiTinh.HeaderText = "Giới Tính Nam";
+            this.col_GioiTinh.Name = "col_GioiTinh";
+            this.col_GioiTinh.Width = 180;
+            // 
             // col_Email
             // 
             this.col_Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.col_Email.DataPropertyName = "col_Email";
             this.col_Email.HeaderText = "Email";
             this.col_Email.Name = "col_Email";
-            // 
-            // col_GioiTinh
-            // 
-            this.col_GioiTinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.col_GioiTinh.DataPropertyName = "col_GioiTinh";
-            this.col_GioiTinh.HeaderText = "Nam";
-            this.col_GioiTinh.Name = "col_GioiTinh";
-            this.col_GioiTinh.Width = 80;
             // 
             // user2_Gv_ClassInfo
             // 
@@ -764,7 +763,7 @@ namespace App_DDSV
         private System.Windows.Forms.DataGridViewTextBoxColumn col_HoLot;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Ten;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Lop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_Email;
         private System.Windows.Forms.DataGridViewCheckBoxColumn col_GioiTinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_Email;
     }
 }

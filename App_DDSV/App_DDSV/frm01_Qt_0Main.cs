@@ -99,50 +99,5 @@ namespace App_DDSV
             f.ShowDialog();
             this.Close();
         }
-
-        private void btn_qlDD_Click(object sender, EventArgs e)
-        {
-            item_Rollcall_Click(sender, e);
-        }
-
-        private void btn_qlHP_Click(object sender, EventArgs e)
-        {
-            item_Class_Click(sender, e);
-        }
-
-        private void btn_qlDKHP_Click(object sender, EventArgs e)
-        {
-            item_ClassRegistration_Click(sender, e);
-        }
-
-        private void btn_qlSV_Click(object sender, EventArgs e)
-        {
-            item_Student_Click(sender, e);
-        }
-
-        private void btn_qlGV_Click(object sender, EventArgs e)
-        {
-            item_Lecturers_Click(sender, e);
-        }
-
-        private void btn_qlACC_Click(object sender, EventArgs e)
-        {
-            item_Account_Click(sender, e);
-        }
-
-        private void btn_Upass_Click(object sender, EventArgs e)
-        {
-            item_UpdatePass_Click(sender, e);
-        }
-
-        private void btn_Logout_Click(object sender, EventArgs e)
-        {
-            item_LogOut_Click(sender, e);
-        }
-
-        private void btn_Train_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

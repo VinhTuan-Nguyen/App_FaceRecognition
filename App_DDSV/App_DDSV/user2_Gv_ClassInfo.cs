@@ -102,11 +102,11 @@ namespace App_DDSV
 
             foreach (DataRow item in data.Tables[2].Rows)
             {
-                if (item.Field<string>("col_GhiChu") == "Có Phép")
+                if (item.Field<string>("col_GhiChu") == "C.Phép")
                 {
                     CPhep += 1;
                 }
-                else if (item.Field<string>("col_GhiChu") == "Không Phép") KPhep += 1;
+                else if (item.Field<string>("col_GhiChu") == "Vắng") KPhep += 1;
             }
             txt_TongSV.Text = dgv_LoadData.Rows.Count.ToString();
             txt_CP.Text = CPhep.ToString();
