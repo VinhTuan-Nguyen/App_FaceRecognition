@@ -46,9 +46,9 @@ namespace App_DDSV
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            if (cbb_NienKhoa.Text != "" && txt_TenHP.Text != "")
+            if (cbb_NienKhoa.Text != "" && txt_TenHP.Text != "" && txt_MaHP.Text != "")
             {
-                conSql.query = "SELECT * FROM tab_LopHP WHERE col_NienKhoa=@nienkhoa and col_TenHP=@tenhp";
+                conSql.query = "SELECT * FROM tab_LopHP WHERE col_NienKhoa=@nienkhoa and col_TenHP=@tenhp and col_MaHP=@mahp";
                 using (conSql.conn = new SqlConnection(conSql.conString))
                 {
                     conSql.conn.Open();
@@ -57,6 +57,7 @@ namespace App_DDSV
                         conSql.cmd = new SqlCommand(conSql.query, conSql.conn);
                         conSql.cmd.Parameters.AddWithValue("@nienkhoa", cbb_NienKhoa.Text);
                         conSql.cmd.Parameters.AddWithValue("@tenhp", txt_TenHP.Text);
+                        conSql.cmd.Parameters.AddWithValue("@mahp", txt_MaHP.Text);
                         conSql.adapter = new SqlDataAdapter(conSql.cmd);
                         DataSet set = new DataSet();
                         conSql.adapter.Fill(set);
@@ -71,7 +72,7 @@ namespace App_DDSV
             }
             else
             {
-                conSql.query = "SELECT * FROM tab_LopHP WHERE col_NienKhoa=@nienkhoa or col_TenHP=@tenhp";
+                conSql.query = "SELECT * FROM tab_LopHP WHERE col_NienKhoa=@nienkhoa or col_TenHP=@tenhp or col_MaHP=@mahp";
                 using (conSql.conn = new SqlConnection(conSql.conString))
                 {
                     conSql.conn.Open();
@@ -80,6 +81,7 @@ namespace App_DDSV
                         conSql.cmd = new SqlCommand(conSql.query, conSql.conn);
                         conSql.cmd.Parameters.AddWithValue("@nienkhoa",cbb_NienKhoa.Text);
                         conSql.cmd.Parameters.AddWithValue("@tenhp", txt_TenHP.Text);
+                        conSql.cmd.Parameters.AddWithValue("@mahp", txt_MaHP.Text);
                         conSql.adapter = new SqlDataAdapter(conSql.cmd);
                         DataSet data = new DataSet();
                         conSql.adapter.Fill(data);
@@ -110,10 +112,13 @@ namespace App_DDSV
 
         private void dgv_HP_View_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = dgv_HP_View.Rows[e.RowIndex];
-            frm01_Qt_ClassEdit f = new frm01_Qt_ClassEdit(row);
-            f.ShowDialog();
-            user1_Qt_Class_Load(sender, e);
+            if(e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgv_HP_View.Rows[e.RowIndex];
+                frm01_Qt_ClassEdit f = new frm01_Qt_ClassEdit(row);
+                f.ShowDialog();
+                user1_Qt_Class_Load(sender, e);
+            }
         }
 
         private void dgv_HP_View_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)

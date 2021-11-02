@@ -57,11 +57,6 @@ namespace App_DDSV
             u.BringToFront();
         }
 
-        private void item_Help_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void item_Logout_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Xác Nhận Thoát Hệ Thống",
@@ -74,36 +69,6 @@ namespace App_DDSV
                 f.ShowDialog();
                 this.Close();
             }
-        }
-
-        private void btn_Rollcall_Click(object sender, EventArgs e)
-        {
-            item_ClassInfo_Click(sender, e);
-        }
-
-        private void btn_History_Click(object sender, EventArgs e)
-        {
-            item_History_Click(sender, e);
-        }
-
-        private void btn_InfoLecturers_Click(object sender, EventArgs e)
-        {
-            item_InfoLecturers_Click(sender, e);
-        }
-
-        private void btn_Help_Click(object sender, EventArgs e)
-        {
-            item_Help_Click(sender, e);
-        }
-
-        private void btn_Upass_Click(object sender, EventArgs e)
-        {
-            item_Upass_Click(sender, e);
-        }
-
-        private void btn_Logout_Click(object sender, EventArgs e)
-        {
-            item_Logout_Click(sender, e);
         }
     }
 }

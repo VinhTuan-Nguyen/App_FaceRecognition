@@ -111,12 +111,12 @@ namespace App_DDSV
         {
             if(e.RowIndex >= 0)
             {
-                DataGridViewRow row = dgv_DataView.Rows[e.RowIndex];
+                /*DataGridViewRow row = dgv_DataView.Rows[e.RowIndex];
                 string MaSV = row.Cells["col_MaSV"].Value.ToString();
                 string Note = row.Cells["col_GhiChu"].Value.ToString();
                 string Time = row.Cells["col_GioDD"].Value.ToString();
-                frm02_Gv_Note f = new frm02_Gv_Note(cbb_List.Text, cbb_MaHP.Text, MaSV, Note, Time);
-                f.ShowDialog();
+                frm00_Note f = new frm00_Note(cbb_List.Text, cbb_MaHP.Text, MaSV, Note, Time);
+                f.ShowDialog();*/
             }
         }
 

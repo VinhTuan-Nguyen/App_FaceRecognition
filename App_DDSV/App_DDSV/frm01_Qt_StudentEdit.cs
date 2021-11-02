@@ -13,15 +13,21 @@ namespace App_DDSV
 {
     public partial class frm01_Qt_StudentEdit : Form
     {
+        public frm01_Qt_StudentEdit()
+        {
+            InitializeComponent();
+            txt_MaSV.Enabled = true;
+            btn_Delete.Enabled = false;
+        }
         public frm01_Qt_StudentEdit(DataGridViewRow row)
         {
             InitializeComponent();
-            txt_MaSV.Text = row.Cells[1].Value.ToString();
-            txt_HoLot.Text = row.Cells[2].Value.ToString();
-            txt_TenSV.Text = row.Cells[3].Value.ToString();
-            txt_Lop.Text = row.Cells[4].Value.ToString();
-            txt_Email.Text = row.Cells[5].Value.ToString();
-            bool sex = (bool)row.Cells[6].Value;
+            txt_MaSV.Text = row.Cells["col_MaSV"].Value.ToString();
+            txt_TenSV.Text = row.Cells["col_HoTen"].Value.ToString();
+            txt_Lop.Text = row.Cells["col_Lop"].Value.ToString();
+            txt_Date.Text = row.Cells["col_NgaySinh"].Value.ToString();
+            txt_Email.Text = row.Cells["col_Email"].Value.ToString();
+            bool sex = (bool)row.Cells["col_GioiTinh"].Value;
             if(sex == true)
             {
                 ra_Nam.Checked = true;
@@ -56,39 +62,108 @@ namespace App_DDSV
             }
         }
 
-        private void btn_Edit_Click(object sender, EventArgs e)
+        private void btn_Save_Click(object sender, EventArgs e)
         {
-            bool sex = ra_Nam.Checked ? true : false;
-
-            conSql.query = @"UPDATE tab_SinhVien SET " +
-                "col_HoLot = @ho," +
-                "col_Ten = @ten," +
-                "col_Lop = @lop," +
-                "col_Email= @email," +
-                "col_GioiTinh = @gt " +
-                "WHERE col_MaSV = @masv";
-
-            using(conSql.conn = new SqlConnection(conSql.conString))
+            if(txt_MaSV.Enabled == true)
             {
-                conSql.conn.Open();
-                conSql.cmd = new SqlCommand(conSql.query, conSql.conn);
-                conSql.cmd.Parameters.AddWithValue("@ho",txt_HoLot.Text);
-                conSql.cmd.Parameters.AddWithValue("@ten",txt_TenSV.Text);
-                conSql.cmd.Parameters.AddWithValue("@lop",txt_Lop.Text.ToUpper());
-                conSql.cmd.Parameters.AddWithValue("@email",txt_Email.Text);
-                conSql.cmd.Parameters.AddWithValue("@gt",sex);
-                conSql.cmd.Parameters.AddWithValue("@masv", txt_MaSV.Text);
-                conSql.cmd.ExecuteNonQuery();
-                MessageBox.Show("Chỉnh Sửa THành Công", "Thành Công",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                conSql.conn.Close();
+                if (txt_Date.Text == "  /  /" || txt_Email.Text == "" ||
+                    txt_Lop.Text == "" || txt_MaSV.Text=="" || txt_TenSV.Text == "" ||
+                    (ra_Nam.Checked == false && ra_Nu.Checked == false))
+                {
+                    MessageBox.Show("Thông Tin Không Được Rỗng", "Lỗi",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    try
+                    {
+                        DateTime dt = DateTime.Parse(txt_Date.Text);
+                        DialogResult result = MessageBox.Show("Xác Nhận Thêm Mới", "Xác Nhận",
+                            MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                        if (result == DialogResult.OK)
+                        {
+                            bool sex = ra_Nam.Checked ? true : false;
+
+                            conSql.query = @"INSERT INTO tab_SinhVien VALUES(@mssv,@lop,@mail,@gt,@ten,@ns)";
+
+                            using (conSql.conn = new SqlConnection(conSql.conString))
+                            {
+                                conSql.conn.Open();
+                                conSql.cmd = new SqlCommand(conSql.query, conSql.conn);
+                                conSql.cmd.Parameters.AddWithValue("@ten", txt_TenSV.Text);
+                                conSql.cmd.Parameters.AddWithValue("@lop", txt_Lop.Text.ToUpper());
+                                conSql.cmd.Parameters.AddWithValue("@mail", txt_Email.Text);
+                                conSql.cmd.Parameters.AddWithValue("@gt", sex);
+                                conSql.cmd.Parameters.AddWithValue("@mssv", txt_MaSV.Text.ToUpper());
+                                conSql.cmd.Parameters.AddWithValue("@ns", dt.ToShortDateString());
+                                conSql.cmd.ExecuteNonQuery();
+                                conSql.conn.Close();
+                            }
+                            MessageBox.Show("Chỉnh Sửa Thành Công", "Thành Công",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    catch
+                    {
+                        txt_Date.Text = "";
+                        MessageBox.Show("Định Dạng Ngày Tháng Sai", "Lỗi",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
+            else
+            {
+                try
+                {
+                    DateTime dt = DateTime.Parse(txt_Date.Text);
+                    bool sex = ra_Nam.Checked ? true : false;
+
+                    conSql.query = @"UPDATE tab_SinhVien SET " +
+                        "col_HoTen = @ten," +
+                        "col_NgaySinh = @ns," +
+                        "col_Lop = @lop," +
+                        "col_Email= @email," +
+                        "col_GioiTinh = @gt " +
+                        "WHERE col_MaSV = @masv";
+
+                    using (conSql.conn = new SqlConnection(conSql.conString))
+                    {
+                        conSql.conn.Open();
+                        conSql.cmd = new SqlCommand(conSql.query, conSql.conn);
+                        conSql.cmd.Parameters.AddWithValue("@ten", txt_TenSV.Text);
+                        conSql.cmd.Parameters.AddWithValue("@lop", txt_Lop.Text.ToUpper());
+                        conSql.cmd.Parameters.AddWithValue("@email", txt_Email.Text);
+                        conSql.cmd.Parameters.AddWithValue("ns", dt.ToShortDateString());
+                        conSql.cmd.Parameters.AddWithValue("@gt", sex);
+                        conSql.cmd.Parameters.AddWithValue("@masv", txt_MaSV.Text);
+                        conSql.cmd.ExecuteNonQuery();
+                        MessageBox.Show("Chỉnh Sửa Thành Công", "Thành Công",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        conSql.conn.Close();
+                    }
+                    this.Close();
+                }
+                catch
+                {
+                    MessageBox.Show("Định Dạng Ngày Tháng Sai", "Lỗi",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
 
-        private void btn_Exit_Click(object sender, EventArgs e)
+        private void btn_Back_MouseHover(object sender, EventArgs e)
         {
-            this.Close();
+            btn_Back.ForeColor = Color.YellowGreen;
+        }
+
+        private void btn_Back_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Back.ForeColor = Color.DarkGreen;
         }
     }
 }

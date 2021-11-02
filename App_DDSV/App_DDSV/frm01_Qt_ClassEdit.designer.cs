@@ -126,6 +126,7 @@ namespace App_DDSV
             this.txt_MaHP.Enabled = false;
             this.txt_MaHP.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_MaHP.Location = new System.Drawing.Point(48, 212);
+            this.txt_MaHP.MaxLength = 10;
             this.txt_MaHP.Name = "txt_MaHP";
             this.txt_MaHP.Size = new System.Drawing.Size(336, 30);
             this.txt_MaHP.TabIndex = 17;

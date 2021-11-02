@@ -51,24 +51,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="conSql.cs" />
-    <Compile Include="frm01_Qt_ClassReg-Add.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm01_Qt_ClassReg-Add.Designer.cs">
-      <DependentUpon>frm01_Qt_ClassReg-Add.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frm01_Qt_ClassReg-EditClass.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm01_Qt_ClassReg-EditClass.Designer.cs">
-      <DependentUpon>frm01_Qt_ClassReg-EditClass.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frm01_Qt_ClassReg-EditStudent.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm01_Qt_ClassReg-EditStudent.Designer.cs">
-      <DependentUpon>frm01_Qt_ClassReg-EditStudent.cs</DependentUpon>
-    </Compile>
     <Compile Include="frm02_Gv_InfoLecturers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,12 +87,6 @@
     <Compile Include="frm01_Qt_ClassEdit.designer.cs">
       <DependentUpon>frm01_Qt_ClassEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm01_Qt_ClassReg-MesageText.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm01_Qt_ClassReg-MesageText.designer.cs">
-      <DependentUpon>frm01_Qt_ClassReg-MesageText.cs</DependentUpon>
-    </Compile>
     <Compile Include="frm01_Qt_LecturersEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,11 +111,11 @@
     <Compile Include="frm02_Gv_History.designer.cs">
       <DependentUpon>frm02_Gv_History.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm02_Gv_Note.cs">
+    <Compile Include="frm00_Note.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm02_Gv_Note.designer.cs">
-      <DependentUpon>frm02_Gv_Note.cs</DependentUpon>
+    <Compile Include="frm00_Note.designer.cs">
+      <DependentUpon>frm00_Note.cs</DependentUpon>
     </Compile>
     <Compile Include="frm02_Gv_Summary.cs">
       <SubType>Form</SubType>
@@ -153,6 +129,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="user1_Qt_0_HPSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user1_Qt_0_HPSearch.Designer.cs">
+      <DependentUpon>user1_Qt_0_HPSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="user1_Qt_Account.cs">
       <SubType>UserControl</SubType>
@@ -202,6 +184,12 @@
     <Compile Include="user2_Gv_History.Designer.cs">
       <DependentUpon>user2_Gv_History.cs</DependentUpon>
     </Compile>
+    <Compile Include="user1_Qt_0_SVSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user1_Qt_0_SVSearch.Designer.cs">
+      <DependentUpon>user1_Qt_0_SVSearch.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frm01_Qt_0Main.resx">
       <DependentUpon>frm01_Qt_0Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,18 +201,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm01_Qt_ClassEdit.resx">
       <DependentUpon>frm01_Qt_ClassEdit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm01_Qt_ClassReg-Add.resx">
-      <DependentUpon>frm01_Qt_ClassReg-Add.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm01_Qt_ClassReg-EditClass.resx">
-      <DependentUpon>frm01_Qt_ClassReg-EditClass.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm01_Qt_ClassReg-EditStudent.resx">
-      <DependentUpon>frm01_Qt_ClassReg-EditStudent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm01_Qt_ClassReg-MesageText.resx">
-      <DependentUpon>frm01_Qt_ClassReg-MesageText.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm01_Qt_LecturersEdit.resx">
       <DependentUpon>frm01_Qt_LecturersEdit.cs</DependentUpon>
@@ -244,8 +220,8 @@
     <EmbeddedResource Include="frm02_Gv_History.resx">
       <DependentUpon>frm02_Gv_History.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm02_Gv_Note.resx">
-      <DependentUpon>frm02_Gv_Note.cs</DependentUpon>
+    <EmbeddedResource Include="frm00_Note.resx">
+      <DependentUpon>frm00_Note.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm02_Gv_Summary.resx">
       <DependentUpon>frm02_Gv_Summary.cs</DependentUpon>
@@ -254,6 +230,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user1_Qt_0_HPSearch.resx">
+      <DependentUpon>user1_Qt_0_HPSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user1_Qt_0_SVSearch.resx">
+      <DependentUpon>user1_Qt_0_SVSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="user1_Qt_Account.resx">
       <DependentUpon>user1_Qt_Account.cs</DependentUpon>

@@ -65,7 +65,6 @@ namespace App_DDSV
                         conSql.cmd.CommandType = CommandType.StoredProcedure;
                         conSql.cmd.Parameters.AddWithValue("@user", txt_UserID.Text);
                         conSql.cmd.Parameters.AddWithValue("@role", role);
-
                         conSql.adapter = new SqlDataAdapter(conSql.cmd);
                         DataSet data = new DataSet();
                         conSql.adapter.Fill(data);
@@ -94,8 +93,6 @@ namespace App_DDSV
 
                 if (result == DialogResult.OK)
                 {
-                    conSql.cmd = new SqlCommand();
-                    conSql.adapter = new SqlDataAdapter();
                     using (conSql.conn = new SqlConnection(conSql.conString))
                     {
                         conSql.conn.Open();
@@ -103,7 +100,6 @@ namespace App_DDSV
                         conSql.cmd.CommandType = CommandType.StoredProcedure;
                         conSql.cmd.Parameters.AddWithValue("@user", txt_UserID.Text);
                         conSql.cmd.Parameters.AddWithValue("@role", "");
-
                         conSql.adapter = new SqlDataAdapter(conSql.cmd);
                         DataSet data = new DataSet();
                         conSql.adapter.Fill(data);
@@ -117,7 +113,6 @@ namespace App_DDSV
                                 conSql.cmd.Parameters.AddWithValue("@user", txt_UserID.Text);
                                 conSql.cmd.Parameters.AddWithValue("@role", role);
                                 conSql.cmd.ExecuteNonQuery();
-                                user1_Qt_Account_Load(sender, e);
                                 MessageBox.Show("Thêm Thành Công!", "Thông Báo",
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
@@ -133,6 +128,7 @@ namespace App_DDSV
                         }
                         conSql.conn.Close();
                     }
+                    user1_Qt_Account_Load(sender, e);
                 }
             }
             else

@@ -39,22 +39,25 @@
             this.txt_Email = new System.Windows.Forms.TextBox();
             this.txt_Lop = new System.Windows.Forms.TextBox();
             this.txt_TenSV = new System.Windows.Forms.TextBox();
-            this.txt_HoLot = new System.Windows.Forms.TextBox();
             this.txt_MaSV = new System.Windows.Forms.TextBox();
             this.btn_Delete = new System.Windows.Forms.Button();
-            this.btn_Edit = new System.Windows.Forms.Button();
-            this.btn_Exit = new System.Windows.Forms.Button();
+            this.btn_Save = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
+            this.btn_Back = new System.Windows.Forms.Button();
+            this.txt_Date = new System.Windows.Forms.MaskedTextBox();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // ra_Nam
             // 
             this.ra_Nam.AutoSize = true;
-            this.ra_Nam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ra_Nam.Location = new System.Drawing.Point(583, 250);
+            this.ra_Nam.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ra_Nam.ForeColor = System.Drawing.Color.MediumBlue;
+            this.ra_Nam.Location = new System.Drawing.Point(190, 348);
             this.ra_Nam.Name = "ra_Nam";
-            this.ra_Nam.Size = new System.Drawing.Size(62, 24);
-            this.ra_Nam.TabIndex = 18;
+            this.ra_Nam.Size = new System.Drawing.Size(68, 27);
+            this.ra_Nam.TabIndex = 5;
             this.ra_Nam.TabStop = true;
             this.ra_Nam.Text = "Nam";
             this.ra_Nam.UseVisualStyleBackColor = true;
@@ -62,11 +65,12 @@
             // ra_Nu
             // 
             this.ra_Nu.AutoSize = true;
-            this.ra_Nu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ra_Nu.Location = new System.Drawing.Point(504, 250);
+            this.ra_Nu.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ra_Nu.ForeColor = System.Drawing.Color.MediumBlue;
+            this.ra_Nu.Location = new System.Drawing.Point(291, 348);
             this.ra_Nu.Name = "ra_Nu";
-            this.ra_Nu.Size = new System.Drawing.Size(48, 24);
-            this.ra_Nu.TabIndex = 19;
+            this.ra_Nu.Size = new System.Drawing.Size(55, 27);
+            this.ra_Nu.TabIndex = 5;
             this.ra_Nu.TabStop = true;
             this.ra_Nu.Text = "Nữ";
             this.ra_Nu.UseVisualStyleBackColor = true;
@@ -74,159 +78,192 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(385, 249);
+            this.label6.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label6.Location = new System.Drawing.Point(40, 350);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 20);
+            this.label6.Size = new System.Drawing.Size(102, 23);
             this.label6.TabIndex = 12;
             this.label6.Text = "Giới Tính:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(66, 227);
+            this.label5.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label5.Location = new System.Drawing.Point(291, 124);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 20);
+            this.label5.Size = new System.Drawing.Size(66, 23);
             this.label5.TabIndex = 13;
             this.label5.Text = "Email:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(389, 61);
+            this.label4.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label4.Location = new System.Drawing.Point(408, 231);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 20);
+            this.label4.Size = new System.Drawing.Size(52, 23);
             this.label4.TabIndex = 14;
             this.label4.Text = "Lớp:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(389, 144);
+            this.label3.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label3.Location = new System.Drawing.Point(40, 124);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 20);
+            this.label3.Size = new System.Drawing.Size(139, 23);
             this.label3.TabIndex = 15;
             this.label3.Text = "Tên Sinh Viên:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(66, 144);
+            this.label2.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label2.Location = new System.Drawing.Point(217, 231);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 20);
+            this.label2.Size = new System.Drawing.Size(104, 23);
             this.label2.TabIndex = 16;
-            this.label2.Text = "Họ Lót:";
+            this.label2.Text = "Ngày Sinh:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(66, 61);
+            this.label1.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label1.Location = new System.Drawing.Point(40, 231);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 20);
+            this.label1.Size = new System.Drawing.Size(65, 23);
             this.label1.TabIndex = 17;
-            this.label1.Text = "Mã Số Sinh Viên:";
+            this.label1.Text = "MSSV:";
             // 
             // txt_Email
             // 
-            this.txt_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Email.Location = new System.Drawing.Point(66, 249);
+            this.txt_Email.BackColor = System.Drawing.SystemColors.Info;
+            this.txt_Email.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Email.Location = new System.Drawing.Point(291, 159);
             this.txt_Email.Name = "txt_Email";
-            this.txt_Email.Size = new System.Drawing.Size(256, 27);
-            this.txt_Email.TabIndex = 7;
+            this.txt_Email.Size = new System.Drawing.Size(335, 30);
+            this.txt_Email.TabIndex = 1;
             // 
             // txt_Lop
             // 
-            this.txt_Lop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Lop.Location = new System.Drawing.Point(389, 83);
+            this.txt_Lop.BackColor = System.Drawing.SystemColors.Info;
+            this.txt_Lop.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Lop.Location = new System.Drawing.Point(408, 266);
             this.txt_Lop.Name = "txt_Lop";
-            this.txt_Lop.Size = new System.Drawing.Size(256, 27);
-            this.txt_Lop.TabIndex = 8;
+            this.txt_Lop.Size = new System.Drawing.Size(218, 30);
+            this.txt_Lop.TabIndex = 4;
             // 
             // txt_TenSV
             // 
-            this.txt_TenSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TenSV.Location = new System.Drawing.Point(389, 166);
+            this.txt_TenSV.BackColor = System.Drawing.SystemColors.Info;
+            this.txt_TenSV.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TenSV.Location = new System.Drawing.Point(40, 159);
             this.txt_TenSV.Name = "txt_TenSV";
-            this.txt_TenSV.Size = new System.Drawing.Size(256, 27);
-            this.txt_TenSV.TabIndex = 9;
-            // 
-            // txt_HoLot
-            // 
-            this.txt_HoLot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_HoLot.Location = new System.Drawing.Point(66, 166);
-            this.txt_HoLot.Name = "txt_HoLot";
-            this.txt_HoLot.Size = new System.Drawing.Size(256, 27);
-            this.txt_HoLot.TabIndex = 10;
+            this.txt_TenSV.Size = new System.Drawing.Size(226, 30);
+            this.txt_TenSV.TabIndex = 0;
             // 
             // txt_MaSV
             // 
-            this.txt_MaSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_MaSV.Location = new System.Drawing.Point(66, 83);
+            this.txt_MaSV.BackColor = System.Drawing.SystemColors.Info;
+            this.txt_MaSV.Enabled = false;
+            this.txt_MaSV.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_MaSV.Location = new System.Drawing.Point(40, 266);
+            this.txt_MaSV.MaxLength = 10;
             this.txt_MaSV.Name = "txt_MaSV";
-            this.txt_MaSV.ReadOnly = true;
-            this.txt_MaSV.Size = new System.Drawing.Size(256, 27);
-            this.txt_MaSV.TabIndex = 11;
+            this.txt_MaSV.Size = new System.Drawing.Size(147, 30);
+            this.txt_MaSV.TabIndex = 2;
             // 
             // btn_Delete
             // 
-            this.btn_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Delete.Location = new System.Drawing.Point(66, 321);
+            this.btn_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Delete.Location = new System.Drawing.Point(571, 92);
             this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(137, 60);
-            this.btn_Delete.TabIndex = 20;
-            this.btn_Delete.Text = "Xóa Sinh Viên";
+            this.btn_Delete.Size = new System.Drawing.Size(55, 55);
+            this.btn_Delete.TabIndex = 8;
+            this.btn_Delete.Text = "delete";
             this.btn_Delete.UseVisualStyleBackColor = true;
             this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
-            // btn_Edit
+            // btn_Save
             // 
-            this.btn_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Edit.Location = new System.Drawing.Point(287, 321);
-            this.btn_Edit.Name = "btn_Edit";
-            this.btn_Edit.Size = new System.Drawing.Size(137, 60);
-            this.btn_Edit.TabIndex = 20;
-            this.btn_Edit.Text = "Chỉnh Sửa Thông Tin";
-            this.btn_Edit.UseVisualStyleBackColor = true;
-            this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
+            this.btn_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Save.Location = new System.Drawing.Point(483, 92);
+            this.btn_Save.Name = "btn_Save";
+            this.btn_Save.Size = new System.Drawing.Size(55, 55);
+            this.btn_Save.TabIndex = 7;
+            this.btn_Save.Text = "save";
+            this.btn_Save.UseVisualStyleBackColor = true;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
-            // btn_Exit
+            // panel2
             // 
-            this.btn_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Exit.Location = new System.Drawing.Point(508, 321);
-            this.btn_Exit.Name = "btn_Exit";
-            this.btn_Exit.Size = new System.Drawing.Size(137, 60);
-            this.btn_Exit.TabIndex = 20;
-            this.btn_Exit.Text = "Thoát";
-            this.btn_Exit.UseVisualStyleBackColor = true;
-            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
+            this.panel2.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(661, 70);
+            this.panel2.TabIndex = 21;
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(389, 252);
+            this.label7.Font = new System.Drawing.Font("Constantia", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label7.Location = new System.Drawing.Point(229, 11);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 20);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Giới Tính:";
+            this.label7.Size = new System.Drawing.Size(203, 49);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Sinh Viên";
+            // 
+            // btn_Back
+            // 
+            this.btn_Back.FlatAppearance.BorderSize = 0;
+            this.btn_Back.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lavender;
+            this.btn_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Back.Font = new System.Drawing.Font("Constantia", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Back.ForeColor = System.Drawing.Color.Brown;
+            this.btn_Back.Location = new System.Drawing.Point(513, 332);
+            this.btn_Back.Name = "btn_Back";
+            this.btn_Back.Size = new System.Drawing.Size(113, 43);
+            this.btn_Back.TabIndex = 6;
+            this.btn_Back.Text = "Trở Về";
+            this.btn_Back.UseVisualStyleBackColor = true;
+            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
+            this.btn_Back.MouseLeave += new System.EventHandler(this.btn_Back_MouseLeave);
+            this.btn_Back.MouseHover += new System.EventHandler(this.btn_Back_MouseHover);
+            // 
+            // txt_Date
+            // 
+            this.txt_Date.BackColor = System.Drawing.SystemColors.Info;
+            this.txt_Date.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Date.Location = new System.Drawing.Point(217, 266);
+            this.txt_Date.Mask = "00/00/0000";
+            this.txt_Date.Name = "txt_Date";
+            this.txt_Date.Size = new System.Drawing.Size(159, 30);
+            this.txt_Date.TabIndex = 3;
+            this.txt_Date.ValidatingType = typeof(System.DateTime);
             // 
             // frm01_Qt_StudentEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(702, 420);
-            this.Controls.Add(this.btn_Exit);
-            this.Controls.Add(this.btn_Edit);
+            this.ClientSize = new System.Drawing.Size(661, 405);
+            this.Controls.Add(this.txt_Date);
+            this.Controls.Add(this.btn_Back);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.btn_Save);
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.ra_Nam);
             this.Controls.Add(this.ra_Nu);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -236,11 +273,12 @@
             this.Controls.Add(this.txt_Email);
             this.Controls.Add(this.txt_Lop);
             this.Controls.Add(this.txt_TenSV);
-            this.Controls.Add(this.txt_HoLot);
             this.Controls.Add(this.txt_MaSV);
             this.Name = "frm01_Qt_StudentEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông Tin Sinh Viên";
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,11 +297,12 @@
         private System.Windows.Forms.TextBox txt_Email;
         private System.Windows.Forms.TextBox txt_Lop;
         private System.Windows.Forms.TextBox txt_TenSV;
-        private System.Windows.Forms.TextBox txt_HoLot;
         private System.Windows.Forms.TextBox txt_MaSV;
         private System.Windows.Forms.Button btn_Delete;
-        private System.Windows.Forms.Button btn_Edit;
-        private System.Windows.Forms.Button btn_Exit;
+        private System.Windows.Forms.Button btn_Save;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btn_Back;
+        private System.Windows.Forms.MaskedTextBox txt_Date;
     }
 }

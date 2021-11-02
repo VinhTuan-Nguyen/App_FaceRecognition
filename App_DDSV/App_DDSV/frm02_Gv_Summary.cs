@@ -47,12 +47,12 @@ namespace App_DDSV
         {
             if(e.RowIndex >= 0)
             {
-                DataGridViewRow row = dgv_SummaryNotYet.Rows[e.RowIndex];
+                /*DataGridViewRow row = dgv_SummaryNotYet.Rows[e.RowIndex];
                 string MaSV = row.Cells["col_MaSV_NotYet"].Value.ToString();
                 string Note = row.Cells["col_GhiChu_NotYet"].Value.ToString();
                 string Time = row.Cells["col_GioDD_NotYet"].Value.ToString();
-                frm02_Gv_Note f = new frm02_Gv_Note(Date, MaHP, MaSV, Note, Time);
-                f.ShowDialog();
+                frm00_Note f = new frm00_Note(Date, MaHP, MaSV, Note, Time);
+                f.ShowDialog();*/
             }
             load_Data();
         }
@@ -61,12 +61,12 @@ namespace App_DDSV
         {
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = dgv_SummaryDone.Rows[e.RowIndex];
+                /*DataGridViewRow row = dgv_SummaryDone.Rows[e.RowIndex];
                 string MaSV = row.Cells["col_MaSV_Done"].Value.ToString();
                 string Note = row.Cells["col_GhiChu_Done"].Value.ToString();
                 string Time = row.Cells["col_GioDD_Done"].Value.ToString();
-                frm02_Gv_Note f = new frm02_Gv_Note(Date, MaHP, MaSV, Note, Time);
-                f.ShowDialog();
+                frm00_Note f = new frm00_Note(Date, MaHP, MaSV, Note, Time);
+                f.ShowDialog();*/
             }
             load_Data();
         }

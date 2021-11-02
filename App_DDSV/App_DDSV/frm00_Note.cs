@@ -11,26 +11,19 @@ using System.Windows.Forms;
 
 namespace App_DDSV
 {
-    public partial class frm02_Gv_Note : Form
+    public partial class frm00_Note : Form
     {
-        private static string Date;
-        private static string MaHP;
-        private static string MaSV;
         private static string Note;
-        private static string Time;
 
-        public frm02_Gv_Note(string date, string mahp, string masv, string note, string time)
+        public frm00_Note(string date, string mahp, string masv, string note, string time,string name)
         {
-            Date = date;
-            MaHP = mahp;
-            MaSV = masv;
-            Note = note;
-            Time = time;
             InitializeComponent();
-        }
-
-        private void frm02_Gv_Note_Load(object sender, EventArgs e)
-        {
+            txt_Date.Text = date;
+            txt_MaHP.Text = mahp;
+            txt_MaSV.Text = masv;
+            txt_Time.Text = time;
+            txt_TenSV.Text = name;
+            Note = note;
             switch (Note)
             {
                 case "Có Mặt":
@@ -47,6 +40,10 @@ namespace App_DDSV
                     txt_GhiChu.Text = Note;
                     break;
             }
+        }
+
+        private void frm02_Gv_Note_Load(object sender, EventArgs e)
+        {
             timer1.Start();
         }
 
@@ -73,7 +70,7 @@ namespace App_DDSV
             }
         }
 
-        private void btn_Update_Click(object sender, EventArgs e)
+        private void btn_OK_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Xác Nhận Thay Đổi Ghi Chú Của Sinh Viên Này", "Xác Nhận",
                 MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
@@ -89,10 +86,10 @@ namespace App_DDSV
                     conSql.conn.Open();
                     conSql.cmd = new SqlCommand(conSql.query, conSql.conn);
                     conSql.cmd.Parameters.AddWithValue("@note", txt_GhiChu.Text);
-                    conSql.cmd.Parameters.AddWithValue("@date", Date);
-                    conSql.cmd.Parameters.AddWithValue("@mahp", MaHP);
-                    conSql.cmd.Parameters.AddWithValue("@masv", MaSV);
-                    conSql.cmd.Parameters.AddWithValue("@time", Time);
+                    conSql.cmd.Parameters.AddWithValue("@date", DateTime.Parse(txt_Date.Text));
+                    conSql.cmd.Parameters.AddWithValue("@mahp", txt_MaHP.Text);
+                    conSql.cmd.Parameters.AddWithValue("@masv", txt_MaSV.Text);
+                    conSql.cmd.Parameters.AddWithValue("@time", txt_Time.Text);
                     conSql.cmd.ExecuteNonQuery();
                     conSql.conn.Close();
                 }
@@ -101,9 +98,29 @@ namespace App_DDSV
             this.Close();
         }
 
-        private void btn_Exit_Click(object sender, EventArgs e)
+        private void btn_Back_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_OK_MouseHover(object sender, EventArgs e)
+        {
+            btn_OK.ForeColor = Color.YellowGreen;
+        }
+
+        private void btn_OK_MouseLeave(object sender, EventArgs e)
+        {
+            btn_OK.ForeColor = Color.DarkGreen;
+        }
+
+        private void btn_Back_MouseHover(object sender, EventArgs e)
+        {
+            btn_Back.ForeColor = Color.OrangeRed;
+        }
+
+        private void btn_Back_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Back.ForeColor = Color.Brown;
         }
     }
 }

@@ -92,10 +92,13 @@ namespace App_DDSV
 
         private void dgv_GV_View_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = dgv_GV_View.Rows[e.RowIndex];
-            frm01_Qt_LecturersEdit f = new frm01_Qt_LecturersEdit(row);
-            f.ShowDialog();
-            user1_Qt_Lecturers_Load(sender, e);
+            if(e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgv_GV_View.Rows[e.RowIndex];
+                frm01_Qt_LecturersEdit f = new frm01_Qt_LecturersEdit(row);
+                f.ShowDialog();
+                user1_Qt_Lecturers_Load(sender, e);
+            }
         }
 
         private void dgv_GV_View_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
