@@ -41,11 +41,11 @@ namespace App_DDSV
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            using (conSql.conn = new SqlConnection(conSql.conString))
+            try
             {
-                conSql.conn.Open();
-                try
+                using (conSql.conn = new SqlConnection(conSql.conString))
                 {
+                    conSql.conn.Open();
                     conSql.cmd = new SqlCommand("asp_AllUser", conSql.conn);
                     conSql.cmd.CommandType = CommandType.StoredProcedure;
                     conSql.cmd.Parameters.AddWithValue("@user", txt_User.Text);
@@ -66,26 +66,10 @@ namespace App_DDSV
                         }
                         else
                         {
-                            conSql.query = @"SELECT * FROM tab_GiangVien WHERE col_MaGV = @magv";
-                            conSql.cmd = new SqlCommand(conSql.query, conSql.conn);
-                            conSql.cmd.Parameters.AddWithValue("@magv", txt_User.Text);
-                            conSql.adapter = new SqlDataAdapter(conSql.cmd);
-                            DataSet data = new DataSet();
-                            conSql.adapter.Fill(data);
-                            if (data.Tables[0].Rows.Count > 0)
-                            {
-                                this.Hide();
-                                DataRow row = data.Tables[0].Rows[0];
-                                frm02_Gv_0Main f = new frm02_Gv_0Main(row);
-                                f.ShowDialog();
-                                this.Close();
-                            }
-                            else
-                            {
-                                MessageBox.Show("Tài Khoản Đã Được Khởi Tạo\n" +
-                                    "Nhưng Thông Tin Giảng Viên Chưa Có Trong CSDL",
-                                    "Đăng Nhập Thất Bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
+                            this.Hide();
+                            frm02_Gv_0Main f = new frm02_Gv_0Main(txt_User.Text);
+                            f.ShowDialog();
+                            this.Close();
                         }
                     }
                     else
@@ -93,13 +77,13 @@ namespace App_DDSV
                         MessageBox.Show("Đăng Nhập Thất Bại\nSai Tài Khoản Hoặc Mật Khẩu", "Lỗi Đăng Nhập",
                             MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
+                    conSql.conn.Close();
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Thông Tin Lỗi:\n\n" + ex.Message, "Lỗi Kết Nối",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                conSql.conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Không Thể Kết Nối Với Cơ Sở Dữ LiệuThông Tin Lỗi:\n\n" + ex.Message, "Lỗi Kết Nối",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

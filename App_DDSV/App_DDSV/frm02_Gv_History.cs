@@ -14,12 +14,12 @@ namespace App_DDSV
 {
     public partial class frm02_Gv_History : Form
     {
-        public frm02_Gv_History(string mssv, string tenSV, string mahp)
+        public frm02_Gv_History(string mssv, string ten, string mahp)
         {
             InitializeComponent();
             txt_MaSV.Text = mssv;
             txt_MaHP.Text = mahp;
-            txt_TenSV.Text = tenSV;
+            txt_TenSV.Text = ten;
         }
 
         private void frm02_Gv_History_Load(object sender, EventArgs e)
@@ -47,44 +47,24 @@ namespace App_DDSV
             }
         }
 
-        private void btn_Search_Click(object sender, EventArgs e)
+        private void btn_Back_Click(object sender, EventArgs e)
         {
-            conSql.query = "SELECT col_NgayDD, col_GioDD, col_GhiChu FROM tab_DiemDanh WHERE " +
-                "col_MaSV = @mssv and " +
-                "col_MaHP = @mahp and " +
-                "col_NgayDD BETWEEN @dateS and @dateE";
-            TimeSpan ts = new TimeSpan(12, 00, 00);
-            using(conSql.conn = new SqlConnection(conSql.conString))
-            {
-                conSql.conn.Open();
-                try
-                {
-                    conSql.cmd = new SqlCommand(conSql.query, conSql.conn);
-                    conSql.cmd.Parameters.AddWithValue("@mssv", txt_MaSV.Text);
-                    conSql.cmd.Parameters.AddWithValue("@mahp", txt_MaHP.Text);
-                    conSql.cmd.Parameters.AddWithValue("@dateS", pick_Search.Value - ts) ;
-                    conSql.cmd.Parameters.AddWithValue("@dateE", pick_Search.Value + ts);
-                    conSql.adapter = new SqlDataAdapter(conSql.cmd);
-                    DataSet data = new DataSet();
-                    conSql.adapter.Fill(data);
-                    if(data.Tables[0].Rows.Count == 0)
-                    {
-                        MessageBox.Show("Không Tìm Thấy Dữ Liệu", "Lỗi",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    dgv_History.DataSource = data.Tables[0];
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Thông Tin Lỗi: \n" + ex, "Lỗi Kết Nối", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                conSql.conn.Close();
-            }
+            this.Close();
         }
 
         private void dgv_History_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
         {
             dgv_History["col_Stt", e.RowIndex].Value = (e.RowIndex < 9 ? "0" : "") + (e.RowIndex + 1);
+        }
+
+        private void btn_Back_MouseHover(object sender, EventArgs e)
+        {
+            btn_Back.ForeColor = Color.OrangeRed;
+        }
+
+        private void btn_Back_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Back.ForeColor = Color.Brown;
         }
     }
 }

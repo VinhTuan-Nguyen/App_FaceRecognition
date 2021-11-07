@@ -29,22 +29,24 @@ namespace App_DDSV
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm02_Gv_0Main));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.item_Main = new System.Windows.Forms.ToolStripMenuItem();
-            this.thôngTinCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.item_InfoLecturers = new System.Windows.Forms.ToolStripMenuItem();
-            this.item_Upass = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinĐiểmDanhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.item_ClassInfo = new System.Windows.Forms.ToolStripMenuItem();
             this.item_History = new System.Windows.Forms.ToolStripMenuItem();
+            this.quảnLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.item_Class = new System.Windows.Forms.ToolStripMenuItem();
+            this.item_AddSV = new System.Windows.Forms.ToolStripMenuItem();
+            this.thôngTinCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.item_InfoLecturers = new System.Windows.Forms.ToolStripMenuItem();
+            this.item_Upass = new System.Windows.Forms.ToolStripMenuItem();
+            this.item_LogOut = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.item_LogOut = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -57,10 +59,11 @@ namespace App_DDSV
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.item_Main,
             this.thôngTinĐiểmDanhToolStripMenuItem,
+            this.quảnLýToolStripMenuItem,
             this.thôngTinCáNhânToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1366, 31);
+            this.menuStrip1.Size = new System.Drawing.Size(1479, 31);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -72,6 +75,56 @@ namespace App_DDSV
             this.item_Main.Size = new System.Drawing.Size(136, 27);
             this.item_Main.Text = "Về Trang Chủ";
             this.item_Main.Click += new System.EventHandler(this.item_Main_Click);
+            // 
+            // thôngTinĐiểmDanhToolStripMenuItem
+            // 
+            this.thôngTinĐiểmDanhToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.item_ClassInfo,
+            this.item_History});
+            this.thôngTinĐiểmDanhToolStripMenuItem.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thôngTinĐiểmDanhToolStripMenuItem.ForeColor = System.Drawing.Color.MediumBlue;
+            this.thôngTinĐiểmDanhToolStripMenuItem.Name = "thôngTinĐiểmDanhToolStripMenuItem";
+            this.thôngTinĐiểmDanhToolStripMenuItem.Size = new System.Drawing.Size(116, 27);
+            this.thôngTinĐiểmDanhToolStripMenuItem.Text = "Điểm Danh";
+            // 
+            // item_ClassInfo
+            // 
+            this.item_ClassInfo.Name = "item_ClassInfo";
+            this.item_ClassInfo.Size = new System.Drawing.Size(242, 28);
+            this.item_ClassInfo.Text = "Thông Tin Lớp";
+            this.item_ClassInfo.Click += new System.EventHandler(this.item_ClassInfo_Click);
+            // 
+            // item_History
+            // 
+            this.item_History.Name = "item_History";
+            this.item_History.Size = new System.Drawing.Size(242, 28);
+            this.item_History.Text = "Lịch Sử Điểm Danh";
+            this.item_History.Click += new System.EventHandler(this.item_History_Click);
+            // 
+            // quảnLýToolStripMenuItem
+            // 
+            this.quảnLýToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.item_Class,
+            this.item_AddSV});
+            this.quảnLýToolStripMenuItem.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quảnLýToolStripMenuItem.ForeColor = System.Drawing.Color.MediumBlue;
+            this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
+            this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(92, 27);
+            this.quảnLýToolStripMenuItem.Text = "Quản Lý";
+            // 
+            // item_Class
+            // 
+            this.item_Class.Name = "item_Class";
+            this.item_Class.Size = new System.Drawing.Size(213, 28);
+            this.item_Class.Text = "Quản Lý Lớp";
+            this.item_Class.Click += new System.EventHandler(this.item_Class_Click);
+            // 
+            // item_AddSV
+            // 
+            this.item_AddSV.Name = "item_AddSV";
+            this.item_AddSV.Size = new System.Drawing.Size(213, 28);
+            this.item_AddSV.Text = "Thêm Sinh Viên";
+            this.item_AddSV.Click += new System.EventHandler(this.item_AddSV_Click);
             // 
             // thôngTinCáNhânToolStripMenuItem
             // 
@@ -99,30 +152,12 @@ namespace App_DDSV
             this.item_Upass.Text = "Đổi Mật Khẩu";
             this.item_Upass.Click += new System.EventHandler(this.item_Upass_Click);
             // 
-            // thôngTinĐiểmDanhToolStripMenuItem
+            // item_LogOut
             // 
-            this.thôngTinĐiểmDanhToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.item_ClassInfo,
-            this.item_History});
-            this.thôngTinĐiểmDanhToolStripMenuItem.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thôngTinĐiểmDanhToolStripMenuItem.ForeColor = System.Drawing.Color.MediumBlue;
-            this.thôngTinĐiểmDanhToolStripMenuItem.Name = "thôngTinĐiểmDanhToolStripMenuItem";
-            this.thôngTinĐiểmDanhToolStripMenuItem.Size = new System.Drawing.Size(116, 27);
-            this.thôngTinĐiểmDanhToolStripMenuItem.Text = "Điểm Danh";
-            // 
-            // item_ClassInfo
-            // 
-            this.item_ClassInfo.Name = "item_ClassInfo";
-            this.item_ClassInfo.Size = new System.Drawing.Size(242, 28);
-            this.item_ClassInfo.Text = "Thông Tin Lớp";
-            this.item_ClassInfo.Click += new System.EventHandler(this.item_ClassInfo_Click);
-            // 
-            // item_History
-            // 
-            this.item_History.Name = "item_History";
-            this.item_History.Size = new System.Drawing.Size(242, 28);
-            this.item_History.Text = "Lịch Sử Điểm Danh";
-            this.item_History.Click += new System.EventHandler(this.item_History_Click);
+            this.item_LogOut.Name = "item_LogOut";
+            this.item_LogOut.Size = new System.Drawing.Size(243, 28);
+            this.item_LogOut.Text = "Đăng Xuất";
+            this.item_LogOut.Click += new System.EventHandler(this.item_Logout_Click);
             // 
             // panel1
             // 
@@ -135,19 +170,8 @@ namespace App_DDSV
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 31);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1366, 834);
+            this.panel1.Size = new System.Drawing.Size(1479, 834);
             this.panel1.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(434, 296);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(500, 500);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
             // 
             // label7
             // 
@@ -155,11 +179,11 @@ namespace App_DDSV
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Cambria", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label7.Location = new System.Drawing.Point(579, 201);
+            this.label7.Location = new System.Drawing.Point(569, 201);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(208, 47);
+            this.label7.Size = new System.Drawing.Size(341, 47);
             this.label7.TabIndex = 16;
-            this.label7.Text = "Trang Chủ";
+            this.label7.Text = "Trang Điểm Danh";
             // 
             // label4
             // 
@@ -167,7 +191,7 @@ namespace App_DDSV
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Constantia", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label4.Location = new System.Drawing.Point(598, 39);
+            this.label4.Location = new System.Drawing.Point(654, 39);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(171, 36);
             this.label4.TabIndex = 19;
@@ -179,7 +203,7 @@ namespace App_DDSV
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label6.Location = new System.Drawing.Point(412, 158);
+            this.label6.Location = new System.Drawing.Point(468, 158);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(542, 25);
             this.label6.TabIndex = 17;
@@ -191,24 +215,29 @@ namespace App_DDSV
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Constantia", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label5.Location = new System.Drawing.Point(399, 89);
+            this.label5.Location = new System.Drawing.Point(455, 89);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(568, 59);
             this.label5.TabIndex = 18;
             this.label5.Text = "ĐIỂM DANH SINH VIÊN";
             // 
-            // item_LogOut
+            // pictureBox1
             // 
-            this.item_LogOut.Name = "item_LogOut";
-            this.item_LogOut.Size = new System.Drawing.Size(243, 28);
-            this.item_LogOut.Text = "Đăng Xuất";
-            this.item_LogOut.Click += new System.EventHandler(this.item_Logout_Click);
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.BackgroundImage = global::App_DDSV.Properties.Resources.logo_CTUT;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(490, 296);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(500, 500);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
             // 
             // frm02_Gv_0Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1366, 865);
+            this.ClientSize = new System.Drawing.Size(1479, 865);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -243,5 +272,8 @@ namespace App_DDSV
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ToolStripMenuItem item_LogOut;
+        private System.Windows.Forms.ToolStripMenuItem quảnLýToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem item_Class;
+        private System.Windows.Forms.ToolStripMenuItem item_AddSV;
     }
 }

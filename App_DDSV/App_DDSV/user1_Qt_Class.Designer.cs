@@ -39,6 +39,10 @@ namespace App_DDSV
             this.panel3 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btn_Refresh = new System.Windows.Forms.Button();
+            this.btn_Add = new System.Windows.Forms.Button();
+            this.btn_Search = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txt_MaHP = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,10 +50,6 @@ namespace App_DDSV
             this.label3 = new System.Windows.Forms.Label();
             this.cbb_NienKhoa = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.btn_Refresh = new System.Windows.Forms.Button();
-            this.btn_Add = new System.Windows.Forms.Button();
-            this.btn_Search = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgv_HP_View = new System.Windows.Forms.DataGridView();
@@ -65,8 +65,8 @@ namespace App_DDSV
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_HP_View)).BeginInit();
@@ -107,13 +107,79 @@ namespace App_DDSV
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.panel6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 86);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1450, 110);
             this.panel2.TabIndex = 1;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.btn_Refresh);
+            this.panel5.Controls.Add(this.btn_Add);
+            this.panel5.Controls.Add(this.btn_Search);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel5.Location = new System.Drawing.Point(1142, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(308, 110);
+            this.panel5.TabIndex = 37;
+            // 
+            // btn_Refresh
+            // 
+            this.btn_Refresh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Refresh.BackgroundImage = global::App_DDSV.Properties.Resources.refresh;
+            this.btn_Refresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Refresh.FlatAppearance.BorderSize = 0;
+            this.btn_Refresh.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Refresh.Location = new System.Drawing.Point(215, 30);
+            this.btn_Refresh.Name = "btn_Refresh";
+            this.btn_Refresh.Size = new System.Drawing.Size(75, 50);
+            this.btn_Refresh.TabIndex = 4;
+            this.btn_Refresh.UseVisualStyleBackColor = false;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
+            this.btn_Refresh.MouseLeave += new System.EventHandler(this.btn_Refresh_MouseLeave);
+            this.btn_Refresh.MouseHover += new System.EventHandler(this.btn_Refresh_MouseHover);
+            // 
+            // btn_Add
+            // 
+            this.btn_Add.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Add.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Add.BackgroundImage")));
+            this.btn_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Add.FlatAppearance.BorderSize = 0;
+            this.btn_Add.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Add.Location = new System.Drawing.Point(117, 30);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.Size = new System.Drawing.Size(75, 50);
+            this.btn_Add.TabIndex = 3;
+            this.btn_Add.UseVisualStyleBackColor = false;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
+            this.btn_Add.MouseLeave += new System.EventHandler(this.btn_Add_MouseLeave);
+            this.btn_Add.MouseHover += new System.EventHandler(this.btn_Add_MouseHover);
+            // 
+            // btn_Search
+            // 
+            this.btn_Search.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Search.BackgroundImage = global::App_DDSV.Properties.Resources.search;
+            this.btn_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Search.FlatAppearance.BorderSize = 0;
+            this.btn_Search.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Search.Location = new System.Drawing.Point(19, 30);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(75, 50);
+            this.btn_Search.TabIndex = 2;
+            this.btn_Search.UseVisualStyleBackColor = false;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
+            this.btn_Search.MouseLeave += new System.EventHandler(this.btn_Search_MouseLeave);
+            this.btn_Search.MouseHover += new System.EventHandler(this.btn_Search_MouseHover);
             // 
             // panel6
             // 
@@ -198,65 +264,6 @@ namespace App_DDSV
             this.label1.TabIndex = 1;
             this.label1.Text = "Năm Học:";
             // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.btn_Refresh);
-            this.panel5.Controls.Add(this.btn_Add);
-            this.panel5.Controls.Add(this.btn_Search);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(1142, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(308, 110);
-            this.panel5.TabIndex = 35;
-            // 
-            // btn_Refresh
-            // 
-            this.btn_Refresh.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Refresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Refresh.BackgroundImage")));
-            this.btn_Refresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Refresh.FlatAppearance.BorderSize = 0;
-            this.btn_Refresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lavender;
-            this.btn_Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Refresh.Location = new System.Drawing.Point(216, 30);
-            this.btn_Refresh.Name = "btn_Refresh";
-            this.btn_Refresh.Size = new System.Drawing.Size(50, 50);
-            this.btn_Refresh.TabIndex = 4;
-            this.btn_Refresh.UseVisualStyleBackColor = false;
-            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
-            // 
-            // btn_Add
-            // 
-            this.btn_Add.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Add.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.btn_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Add.FlatAppearance.BorderSize = 0;
-            this.btn_Add.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lavender;
-            this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Add.Location = new System.Drawing.Point(129, 30);
-            this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(50, 50);
-            this.btn_Add.TabIndex = 3;
-            this.btn_Add.UseVisualStyleBackColor = false;
-            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
-            // 
-            // btn_Search
-            // 
-            this.btn_Search.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Search.BackgroundImage")));
-            this.btn_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Search.FlatAppearance.BorderSize = 0;
-            this.btn_Search.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lavender;
-            this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Search.Location = new System.Drawing.Point(42, 30);
-            this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(50, 50);
-            this.btn_Search.TabIndex = 2;
-            this.btn_Search.UseVisualStyleBackColor = false;
-            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Lavender;
@@ -292,6 +299,7 @@ namespace App_DDSV
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.MediumBlue;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Lavender;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.MediumBlue;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_HP_View.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_HP_View.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_HP_View.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
@@ -343,6 +351,7 @@ namespace App_DDSV
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.MediumBlue;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Lavender;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.MediumBlue;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_HP_View.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_HP_View.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgv_HP_View.Size = new System.Drawing.Size(1448, 645);
@@ -371,6 +380,7 @@ namespace App_DDSV
             this.col_TenHP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.col_TenHP.DataPropertyName = "col_TenHP";
             this.col_TenHP.HeaderText = "Tên Lớp Học Phần";
+            this.col_TenHP.MinimumWidth = 350;
             this.col_TenHP.Name = "col_TenHP";
             // 
             // col_NienKhoa
@@ -436,9 +446,9 @@ namespace App_DDSV
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.panel5.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_HP_View)).EndInit();
@@ -459,6 +469,13 @@ namespace App_DDSV
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView dgv_HP_View;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.TextBox txt_MaHP;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btn_Refresh;
+        private System.Windows.Forms.Button btn_Add;
+        private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Stt;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_MaHP;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_TenHP;
@@ -468,12 +485,5 @@ namespace App_DDSV
         private System.Windows.Forms.DataGridViewTextBoxColumn col_NgayKT;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_TrangThai;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_MaGV;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button btn_Refresh;
-        private System.Windows.Forms.Button btn_Add;
-        private System.Windows.Forms.Button btn_Search;
-        private System.Windows.Forms.TextBox txt_MaHP;
-        private System.Windows.Forms.Label label2;
     }
 }

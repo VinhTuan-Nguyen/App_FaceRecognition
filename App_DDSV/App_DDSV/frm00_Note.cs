@@ -15,7 +15,7 @@ namespace App_DDSV
     {
         private static string Note;
 
-        public frm00_Note(string date, string mahp, string masv, string note, string time,string name)
+        public frm00_Note(string date, string mahp, string masv, string note, string time, string name)
         {
             InitializeComponent();
             txt_Date.Text = date;
@@ -29,10 +29,10 @@ namespace App_DDSV
                 case "Có Mặt":
                     ra_Co.Checked = true;
                     break;
-                case "Vắng":
+                case "Không Phép":
                     ra_Vang.Checked = true;
                     break;
-                case "C.Phép":
+                case "Có Phép":
                     ra_Phep.Checked = true;
                     break;
                 default:
@@ -56,12 +56,12 @@ namespace App_DDSV
             }
             else if (ra_Phep.Checked == true)
             {
-                txt_GhiChu.Text = "C.Phép";
+                txt_GhiChu.Text = "Có Phép";
                 txt_GhiChu.Enabled = false;
             }
             else if (ra_Vang.Checked == true)
             {
-                txt_GhiChu.Text = "Vắng";
+                txt_GhiChu.Text = "Không Phép";
                 txt_GhiChu.Enabled = false;
             }
             else

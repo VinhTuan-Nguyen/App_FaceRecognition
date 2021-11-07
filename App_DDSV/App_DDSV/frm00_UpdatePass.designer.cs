@@ -90,7 +90,6 @@ namespace App_DDSV
             this.txt_OldPass.BackColor = System.Drawing.SystemColors.Info;
             this.txt_OldPass.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_OldPass.Location = new System.Drawing.Point(274, 120);
-            this.txt_OldPass.Multiline = true;
             this.txt_OldPass.Name = "txt_OldPass";
             this.txt_OldPass.PasswordChar = '*';
             this.txt_OldPass.Size = new System.Drawing.Size(258, 30);
@@ -102,7 +101,6 @@ namespace App_DDSV
             this.txt_NewPass.BackColor = System.Drawing.SystemColors.Info;
             this.txt_NewPass.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_NewPass.Location = new System.Drawing.Point(274, 169);
-            this.txt_NewPass.Multiline = true;
             this.txt_NewPass.Name = "txt_NewPass";
             this.txt_NewPass.PasswordChar = '*';
             this.txt_NewPass.Size = new System.Drawing.Size(258, 30);

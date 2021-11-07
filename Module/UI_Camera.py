@@ -7,10 +7,10 @@ import PIL.ImageTk
 import tkinter.messagebox as message
 from tkinter import *
 
-mahp = sys.argv[1]
-tenhp = sys.argv[2]
-magv = sys.argv[3]
-date = sys.argv[4]
+mahp = 'sys.argv[1]'
+tenhp = 'sys.argv[2]'
+magv = 'sys.argv[3]'
+date = 'sys.argv[4]'
 
 
 class Camera:

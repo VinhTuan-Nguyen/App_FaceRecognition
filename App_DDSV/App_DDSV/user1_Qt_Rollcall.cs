@@ -222,5 +222,15 @@ namespace App_DDSV
         {
             dgv_View["col_Stt", e.RowIndex].Value = (e.RowIndex < 9 ? "0" : "") + (e.RowIndex + 1);
         }
+
+        private void btn_Search_MouseHover(object sender, EventArgs e)
+        {
+            btn_Search.BackgroundImage = global::App_DDSV.Properties.Resources.search_hover;
+        }
+
+        private void btn_Search_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Search.BackgroundImage = global::App_DDSV.Properties.Resources.search;
+        }
     }
 }

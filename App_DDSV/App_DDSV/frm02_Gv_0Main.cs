@@ -14,10 +14,10 @@ namespace App_DDSV
 
     public partial class frm02_Gv_0Main : Form
     {
-        private static DataRow info;
-        public frm02_Gv_0Main(DataRow row)
+        private static string info;
+        public frm02_Gv_0Main(string magv)
         {
-            info = row;
+            info = magv;
             InitializeComponent();
         }
 
@@ -37,7 +37,7 @@ namespace App_DDSV
 
         private void item_Upass_Click(object sender, EventArgs e)
         {
-            frm00_UpdatePass f = new frm00_UpdatePass(info.Field<string>("col_MaGV"));
+            frm00_UpdatePass f = new frm00_UpdatePass(info);
             f.ShowDialog();
         }
 
@@ -55,6 +55,17 @@ namespace App_DDSV
             panel1.Controls.Add(u);
             u.Dock = DockStyle.Fill;
             u.BringToFront();
+        }
+
+        private void item_Class_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void item_AddSV_Click(object sender, EventArgs e)
+        {
+            frm01_Qt_StudentEdit f = new frm01_Qt_StudentEdit();
+            f.ShowDialog();
         }
 
         private void item_Logout_Click(object sender, EventArgs e)

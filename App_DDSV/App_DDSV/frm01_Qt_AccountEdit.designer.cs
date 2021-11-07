@@ -30,9 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Back = new System.Windows.Forms.Button();
-            this.btn_Save = new System.Windows.Forms.Button();
             this.btn_ResetPass = new System.Windows.Forms.Button();
-            this.btn_Delete = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.ra_Admin = new System.Windows.Forms.RadioButton();
@@ -42,16 +40,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_Delete = new System.Windows.Forms.Button();
+            this.btn_Save = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.btn_Back);
-            this.panel1.Controls.Add(this.btn_Save);
             this.panel1.Controls.Add(this.btn_ResetPass);
-            this.panel1.Controls.Add(this.btn_Delete);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.ra_Admin);
             this.panel1.Controls.Add(this.ra_User);
@@ -84,18 +85,6 @@
             this.btn_Back.MouseLeave += new System.EventHandler(this.btn_Back_MouseLeave);
             this.btn_Back.MouseHover += new System.EventHandler(this.btn_Back_MouseHover);
             // 
-            // btn_Save
-            // 
-            this.btn_Save.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Save.Location = new System.Drawing.Point(388, 96);
-            this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(55, 55);
-            this.btn_Save.TabIndex = 6;
-            this.btn_Save.Text = "save";
-            this.btn_Save.UseVisualStyleBackColor = true;
-            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
-            // 
             // btn_ResetPass
             // 
             this.btn_ResetPass.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -113,18 +102,6 @@
             this.btn_ResetPass.Click += new System.EventHandler(this.btn_ResetPass_Click);
             this.btn_ResetPass.MouseLeave += new System.EventHandler(this.btn_ResetPass_MouseLeave);
             this.btn_ResetPass.MouseHover += new System.EventHandler(this.btn_ResetPass_MouseHover);
-            // 
-            // btn_Delete
-            // 
-            this.btn_Delete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Delete.Location = new System.Drawing.Point(461, 96);
-            this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(55, 55);
-            this.btn_Delete.TabIndex = 7;
-            this.btn_Delete.Text = "delete";
-            this.btn_Delete.UseVisualStyleBackColor = true;
-            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // panel2
             // 
@@ -204,11 +181,11 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Constantia", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.MediumBlue;
             this.label2.Location = new System.Drawing.Point(60, 168);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 23);
+            this.label2.Size = new System.Drawing.Size(100, 23);
             this.label2.TabIndex = 4;
             this.label2.Text = "Password:";
             // 
@@ -216,7 +193,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Constantia", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.MediumBlue;
             this.label3.Location = new System.Drawing.Point(60, 224);
             this.label3.Name = "label3";
@@ -228,13 +205,52 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Constantia", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.MediumBlue;
             this.label1.Location = new System.Drawing.Point(60, 112);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 23);
+            this.label1.Size = new System.Drawing.Size(82, 23);
             this.label1.TabIndex = 7;
             this.label1.Text = "User ID:";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btn_Delete);
+            this.panel3.Controls.Add(this.btn_Save);
+            this.panel3.Location = new System.Drawing.Point(377, 96);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(139, 55);
+            this.panel3.TabIndex = 27;
+            // 
+            // btn_Delete
+            // 
+            this.btn_Delete.BackgroundImage = global::App_DDSV.Properties.Resources.delete;
+            this.btn_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Delete.FlatAppearance.BorderSize = 0;
+            this.btn_Delete.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Delete.Location = new System.Drawing.Point(76, 9);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(55, 35);
+            this.btn_Delete.TabIndex = 23;
+            this.btn_Delete.UseVisualStyleBackColor = true;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
+            // 
+            // btn_Save
+            // 
+            this.btn_Save.BackgroundImage = global::App_DDSV.Properties.Resources.tick;
+            this.btn_Save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Save.FlatAppearance.BorderSize = 0;
+            this.btn_Save.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Save.Location = new System.Drawing.Point(12, 9);
+            this.btn_Save.Name = "btn_Save";
+            this.btn_Save.Size = new System.Drawing.Size(55, 35);
+            this.btn_Save.TabIndex = 23;
+            this.btn_Save.UseVisualStyleBackColor = false;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // frm01_Qt_AccountEdit
             // 
@@ -245,11 +261,12 @@
             this.Controls.Add(this.panel1);
             this.Name = "frm01_Qt_AccountEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Thông Tin User ID";
+            this.Text = "User ID";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -261,8 +278,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RadioButton ra_Admin;
         private System.Windows.Forms.RadioButton ra_User;
-        private System.Windows.Forms.Button btn_Delete;
-        private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.TextBox txt_Pass;
         private System.Windows.Forms.TextBox txt_UserID;
         private System.Windows.Forms.Label label2;
@@ -270,5 +285,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_Back;
         private System.Windows.Forms.Button btn_ResetPass;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btn_Delete;
+        private System.Windows.Forms.Button btn_Save;
     }
 }

@@ -66,6 +66,7 @@
             // 
             // lb_Messenger
             // 
+            this.lb_Messenger.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_Messenger.AutoSize = true;
             this.lb_Messenger.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Messenger.ForeColor = System.Drawing.Color.Red;

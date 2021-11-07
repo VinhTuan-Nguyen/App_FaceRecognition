@@ -327,7 +327,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm00_Note";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sửa Đổi Ghi Chú";
+            this.Text = "Ghi Chú";
             this.Load += new System.EventHandler(this.frm02_Gv_Note_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

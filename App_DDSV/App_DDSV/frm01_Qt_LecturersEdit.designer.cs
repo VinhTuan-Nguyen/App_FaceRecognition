@@ -39,13 +39,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_HoTen = new System.Windows.Forms.TextBox();
-            this.btn_Save = new System.Windows.Forms.Button();
-            this.btn_Delete = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.btn_Back = new System.Windows.Forms.Button();
             this.btn_CreateAcc = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_Delete = new System.Windows.Forms.Button();
+            this.btn_Save = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ra_Nu
@@ -181,30 +183,6 @@
             this.txt_HoTen.Size = new System.Drawing.Size(273, 30);
             this.txt_HoTen.TabIndex = 0;
             // 
-            // btn_Save
-            // 
-            this.btn_Save.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Save.Location = new System.Drawing.Point(523, 136);
-            this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(55, 55);
-            this.btn_Save.TabIndex = 7;
-            this.btn_Save.Text = "save";
-            this.btn_Save.UseVisualStyleBackColor = true;
-            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
-            // 
-            // btn_Delete
-            // 
-            this.btn_Delete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Delete.Location = new System.Drawing.Point(603, 136);
-            this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(55, 55);
-            this.btn_Delete.TabIndex = 8;
-            this.btn_Delete.Text = "delete";
-            this.btn_Delete.UseVisualStyleBackColor = true;
-            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightSteelBlue;
@@ -263,17 +241,55 @@
             this.btn_CreateAcc.MouseLeave += new System.EventHandler(this.btn_CreateAcc_MouseLeave);
             this.btn_CreateAcc.MouseHover += new System.EventHandler(this.btn_CreateAcc_MouseHover);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btn_Delete);
+            this.panel1.Controls.Add(this.btn_Save);
+            this.panel1.Location = new System.Drawing.Point(519, 130);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(139, 55);
+            this.panel1.TabIndex = 27;
+            // 
+            // btn_Delete
+            // 
+            this.btn_Delete.BackgroundImage = global::App_DDSV.Properties.Resources.delete;
+            this.btn_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Delete.FlatAppearance.BorderSize = 0;
+            this.btn_Delete.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Delete.Location = new System.Drawing.Point(76, 9);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(55, 35);
+            this.btn_Delete.TabIndex = 23;
+            this.btn_Delete.UseVisualStyleBackColor = true;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
+            // 
+            // btn_Save
+            // 
+            this.btn_Save.BackgroundImage = global::App_DDSV.Properties.Resources.tick;
+            this.btn_Save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Save.FlatAppearance.BorderSize = 0;
+            this.btn_Save.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Save.Location = new System.Drawing.Point(12, 9);
+            this.btn_Save.Name = "btn_Save";
+            this.btn_Save.Size = new System.Drawing.Size(55, 35);
+            this.btn_Save.TabIndex = 23;
+            this.btn_Save.UseVisualStyleBackColor = false;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
+            // 
             // frm01_Qt_LecturersEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(698, 406);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_CreateAcc);
             this.Controls.Add(this.btn_Back);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.btn_Delete);
-            this.Controls.Add(this.btn_Save);
             this.Controls.Add(this.ra_Nu);
             this.Controls.Add(this.ra_Nam);
             this.Controls.Add(this.txt_Email);
@@ -287,9 +303,10 @@
             this.Controls.Add(this.txt_HoTen);
             this.Name = "frm01_Qt_LecturersEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Thông Tin Giảng Viên";
+            this.Text = "Giảng Viên";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -308,11 +325,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_HoTen;
-        private System.Windows.Forms.Button btn_Save;
-        private System.Windows.Forms.Button btn_Delete;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btn_Back;
         private System.Windows.Forms.Button btn_CreateAcc;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btn_Delete;
+        private System.Windows.Forms.Button btn_Save;
     }
 }

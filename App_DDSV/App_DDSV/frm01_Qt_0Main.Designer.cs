@@ -29,7 +29,6 @@ namespace App_DDSV
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm01_Qt_0Main));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.vềTrangChủToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lớpHọcPhầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,11 +46,11 @@ namespace App_DDSV
             this.item_UpdatePass = new System.Windows.Forms.ToolStripMenuItem();
             this.item_LogOut = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -79,8 +78,8 @@ namespace App_DDSV
             this.vềTrangChủToolStripMenuItem.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vềTrangChủToolStripMenuItem.ForeColor = System.Drawing.Color.MediumBlue;
             this.vềTrangChủToolStripMenuItem.Name = "vềTrangChủToolStripMenuItem";
-            this.vềTrangChủToolStripMenuItem.Size = new System.Drawing.Size(109, 27);
-            this.vềTrangChủToolStripMenuItem.Text = "Trang Chủ";
+            this.vềTrangChủToolStripMenuItem.Size = new System.Drawing.Size(136, 27);
+            this.vềTrangChủToolStripMenuItem.Text = "Về Trang Chủ";
             this.vềTrangChủToolStripMenuItem.Click += new System.EventHandler(this.item_Main_Click);
             // 
             // lớpHọcPhầnToolStripMenuItem
@@ -214,17 +213,6 @@ namespace App_DDSV
             this.panel1.Size = new System.Drawing.Size(1366, 834);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(434, 296);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(500, 500);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            // 
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -273,6 +261,18 @@ namespace App_DDSV
             this.label5.TabIndex = 13;
             this.label5.Text = "ĐIỂM DANH SINH VIÊN";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.BackgroundImage = global::App_DDSV.Properties.Resources.logo_CTUT;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(434, 296);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(500, 500);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
             // frm01_Qt_0Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -283,7 +283,7 @@ namespace App_DDSV
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frm01_Qt_0Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Phần Quản Trị";
+            this.Text = "Trang Quản Trị";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

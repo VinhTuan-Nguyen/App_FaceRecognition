@@ -29,10 +29,10 @@ namespace App_DDSV
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(user1_Qt_Account));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(user1_Qt_Account));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -44,12 +44,12 @@ namespace App_DDSV
             this.label2 = new System.Windows.Forms.Label();
             this.ra_User = new System.Windows.Forms.RadioButton();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btn_Refresh = new System.Windows.Forms.Button();
-            this.btn_Add = new System.Windows.Forms.Button();
-            this.btn_Search = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgv_AllUser = new System.Windows.Forms.DataGridView();
+            this.btn_Refresh = new System.Windows.Forms.Button();
+            this.btn_Add = new System.Windows.Forms.Button();
+            this.btn_Search = new System.Windows.Forms.Button();
             this.col_STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_User = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -190,54 +190,6 @@ namespace App_DDSV
             this.panel5.Size = new System.Drawing.Size(308, 110);
             this.panel5.TabIndex = 12;
             // 
-            // btn_Refresh
-            // 
-            this.btn_Refresh.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Refresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Refresh.BackgroundImage")));
-            this.btn_Refresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Refresh.FlatAppearance.BorderSize = 0;
-            this.btn_Refresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lavender;
-            this.btn_Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Refresh.Location = new System.Drawing.Point(216, 30);
-            this.btn_Refresh.Name = "btn_Refresh";
-            this.btn_Refresh.Size = new System.Drawing.Size(50, 50);
-            this.btn_Refresh.TabIndex = 4;
-            this.btn_Refresh.UseVisualStyleBackColor = false;
-            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
-            // 
-            // btn_Add
-            // 
-            this.btn_Add.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Add.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.btn_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Add.FlatAppearance.BorderSize = 0;
-            this.btn_Add.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lavender;
-            this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Add.Location = new System.Drawing.Point(129, 30);
-            this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(50, 50);
-            this.btn_Add.TabIndex = 3;
-            this.btn_Add.UseVisualStyleBackColor = false;
-            this.btn_Add.Click += new System.EventHandler(this.btn_AddUser_Click);
-            // 
-            // btn_Search
-            // 
-            this.btn_Search.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Search.BackgroundImage")));
-            this.btn_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Search.FlatAppearance.BorderSize = 0;
-            this.btn_Search.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lavender;
-            this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Search.Location = new System.Drawing.Point(42, 30);
-            this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(50, 50);
-            this.btn_Search.TabIndex = 2;
-            this.btn_Search.UseVisualStyleBackColor = false;
-            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
-            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Lavender;
@@ -273,6 +225,7 @@ namespace App_DDSV
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.MediumBlue;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Lavender;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.MediumBlue;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_AllUser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_AllUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_AllUser.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
@@ -301,12 +254,68 @@ namespace App_DDSV
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.MediumBlue;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Lavender;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.MediumBlue;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_AllUser.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_AllUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_AllUser.Size = new System.Drawing.Size(1457, 600);
             this.dgv_AllUser.TabIndex = 2;
             this.dgv_AllUser.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_AllUser_CellDoubleClick);
             this.dgv_AllUser.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgv_AllUser_RowPrePaint);
+            // 
+            // btn_Refresh
+            // 
+            this.btn_Refresh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Refresh.BackgroundImage = global::App_DDSV.Properties.Resources.refresh;
+            this.btn_Refresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Refresh.FlatAppearance.BorderSize = 0;
+            this.btn_Refresh.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Refresh.Location = new System.Drawing.Point(215, 30);
+            this.btn_Refresh.Name = "btn_Refresh";
+            this.btn_Refresh.Size = new System.Drawing.Size(75, 50);
+            this.btn_Refresh.TabIndex = 4;
+            this.btn_Refresh.UseVisualStyleBackColor = false;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
+            this.btn_Refresh.MouseLeave += new System.EventHandler(this.btn_Refresh_MouseLeave);
+            this.btn_Refresh.MouseHover += new System.EventHandler(this.btn_Refresh_MouseHover);
+            // 
+            // btn_Add
+            // 
+            this.btn_Add.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Add.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Add.BackgroundImage")));
+            this.btn_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Add.FlatAppearance.BorderSize = 0;
+            this.btn_Add.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Add.Location = new System.Drawing.Point(117, 30);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.Size = new System.Drawing.Size(75, 50);
+            this.btn_Add.TabIndex = 3;
+            this.btn_Add.UseVisualStyleBackColor = false;
+            this.btn_Add.Click += new System.EventHandler(this.btn_AddUser_Click);
+            this.btn_Add.MouseLeave += new System.EventHandler(this.btn_Add_MouseLeave);
+            this.btn_Add.MouseHover += new System.EventHandler(this.btn_Add_MouseHover);
+            // 
+            // btn_Search
+            // 
+            this.btn_Search.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Search.BackgroundImage = global::App_DDSV.Properties.Resources.search;
+            this.btn_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Search.FlatAppearance.BorderSize = 0;
+            this.btn_Search.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Search.Location = new System.Drawing.Point(19, 30);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(75, 50);
+            this.btn_Search.TabIndex = 2;
+            this.btn_Search.UseVisualStyleBackColor = false;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
+            this.btn_Search.MouseLeave += new System.EventHandler(this.btn_Search_MouseLeave);
+            this.btn_Search.MouseHover += new System.EventHandler(this.btn_Search_MouseHover);
             // 
             // col_STT
             // 
@@ -328,6 +337,7 @@ namespace App_DDSV
             this.col_Password.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.col_Password.DataPropertyName = "col_Password";
             this.col_Password.HeaderText = "Password";
+            this.col_Password.MinimumWidth = 350;
             this.col_Password.Name = "col_Password";
             // 
             // col_Role
@@ -375,14 +385,14 @@ namespace App_DDSV
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView dgv_AllUser;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_STT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_User;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_Password;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_Role;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btn_Refresh;
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_STT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_User;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_Password;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_Role;
     }
 }

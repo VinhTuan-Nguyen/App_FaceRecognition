@@ -158,12 +158,12 @@ namespace App_DDSV
 
         private void btn_Back_MouseHover(object sender, EventArgs e)
         {
-            btn_Back.ForeColor = Color.YellowGreen;
+            btn_Back.ForeColor = Color.OrangeRed;
         }
 
         private void btn_Back_MouseLeave(object sender, EventArgs e)
         {
-            btn_Back.ForeColor = Color.DarkGreen;
+            btn_Back.ForeColor = Color.Brown;
         }
     }
 }
