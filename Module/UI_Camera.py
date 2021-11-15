@@ -7,15 +7,16 @@ import PIL.ImageTk
 import tkinter.messagebox as message
 from tkinter import *
 
-mahp = 'sys.argv[1]'
-tenhp = 'sys.argv[2]'
-magv = 'sys.argv[3]'
-date = 'sys.argv[4]'
-
+mahp = sys.argv[1]
+tenhp = sys.argv[2]
+magv = sys.argv[3]
+date = sys.argv[4]
+database = sys.argv[5] #db_DDSV;
+server = sys.argv[6] #DESKTOP-RT8LMKB;
 
 class Camera:
 
-    def __init__(self, mahp, tenhp, magv, date):
+    def __init__(self, mahp, tenhp, magv, date, database, server):
         '''
             Khởi tạo các đối tượng của Form, Khởi tạo Camera, nhận input,...
         :param mahp:
@@ -32,11 +33,13 @@ class Camera:
         '''
             Tạo Chuỗi Connect
         '''
-        self.conn = pyodbc.connect(
-            "Driver={SQL Server Native Client 11.0};"
-            "Server=DESKTOP-KV5JDU2;"
-            "Database=db_DDSV;"
-            "Trusted_Connection=yes;", autocommit=True)
+        self.connectString = ''.join([
+            "Driver={SQL Server Native Client 11.0};",
+            "Server=", server,
+            "Database=", database,
+            "Trusted_Connection=yes;"
+        ])
+        self.conn = pyodbc.connect(self.connectString, autocommit=True)
         '''
             Khởi Tạo Form Main
         '''
@@ -58,7 +61,7 @@ class Camera:
             Khởi Tạo Camera, Load Model Phát Hiện Gương Mặt
         '''
         self.camera = cv2.VideoCapture(0, cv2.CAP_DSHOW)
-        self.cascade = cv2.CascadeClassifier("haarcascade_frontalface_alt_tree.xml")
+        self.cascade = cv2.CascadeClassifier("haarcascade_frontalface_alt2.xml")
         '''
             Các Hàm Xử Lý Giao Diện
         '''
@@ -67,11 +70,6 @@ class Camera:
         self.win.mainloop()
 
     def config_window(self):
-        """
-            Tùy chỉnh giao diện WINDOW
-        :return: None
-        """
-
         '''
             config FormMain
         '''
@@ -86,14 +84,15 @@ class Camera:
         '''
         self.win.configure(bg='Lavender')
         self.lb_title.configure(bg='Lavender', fg='MediumBlue')
-        self.lb_message.configure(bg='Lavender', fg='MediumBlue')
-        self.lb_sumData.configure(bg='Lavender')
-        self.lb_countData.configure(bg='Lavender')
-        self.lb_dateTitle.configure(bg='Lavender')
-        self.lb_date.configure(bg='Lavender')
-        self.lb_timeTitle.configure(bg='Lavender')
-        self.lb_time.configure(bg='Lavender')
-        self.lb_TenHP.configure(bg='Lavender')
+        self.lb_message.configure(bg='Lavender', fg='Brown')
+        self.lb_sumData.configure(bg='Lavender', fg='Brown')
+        self.lb_countData.configure(bg='Lavender', fg='Brown')
+        self.lb_dateTitle.configure(bg='Lavender', fg='Brown')
+        self.lb_date.configure(bg='Lavender', fg='MediumBlue')
+        self.lb_timeTitle.configure(bg='Lavender', fg='Brown')
+        self.lb_time.configure(bg='Lavender', fg='MediumBlue')
+        self.lb_TenHP.configure(bg='Lavender', fg='Brown')
+        self.txt_TenHP.configure(bg='Lavender')
         self.btn_Accept.configure(fg='MediumBlue')
         self.btn_Summary.configure(fg='MediumBlue')
         '''
@@ -110,9 +109,9 @@ class Camera:
         '''
             config Width - Height
         '''
-        self.txt_TenHP.configure(width=23, height=3)
-        self.btn_Accept.configure(width=20, height=2)
-        self.btn_Summary.configure(width=20, height=2)
+        self.txt_TenHP.configure(width=32, height=3)
+        self.btn_Accept.configure(width=12, height=2)
+        self.btn_Summary.configure(width=12, height=2)
         self.can_Camera.configure(width=1000, height=750)
         '''
             config Font
@@ -120,15 +119,15 @@ class Camera:
         self.lb_title.configure(font=('Constantia', 28, 'bold'))
         self.lb_sumData.configure(font=('Consolas', 20, 'bold'))
         self.lb_countData.configure(font=('Consolas', 20, 'bold'))
-        self.lb_dateTitle.configure(font=('Consolas', 13))
-        self.lb_date.configure(font=('Consolas', 20, 'bold italic'))
-        self.lb_timeTitle.configure(font=('Consolas', 13))
-        self.lb_time.configure(font=('Consolas', 40, 'bold'))
-        self.lb_TenHP.configure(font=('Constantia', 13))
-        self.txt_TenHP.configure(font=('Consolas', 18), wrap=WORD)
-        self.btn_Accept.configure(font=('Constantia', 15, 'bold'))
-        self.btn_Summary.configure(font=('Constantia', 15, 'bold'))
-        self.lb_message.configure(font=('Book', 17))
+        self.lb_dateTitle.configure(font=('Constantia', 13, 'bold'))
+        self.lb_date.configure(font=('Consolas', 25, 'bold'))
+        self.lb_timeTitle.configure(font=('Constantia', 13, 'bold'))
+        self.lb_time.configure(font=('Consolas', 50, 'bold'))
+        self.lb_TenHP.configure(font=('Constantia', 13, 'bold'))
+        self.txt_TenHP.configure(font=('Constantia', 16), wrap=WORD)
+        self.btn_Accept.configure(font=('Constantia', 20, 'bold'))
+        self.btn_Summary.configure(font=('Constantia', 20, 'bold'))
+        self.lb_message.configure(font=('Constantia', 13, 'italic'))
         '''
             config Grid
         '''
@@ -142,7 +141,7 @@ class Camera:
         self.lb_timeTitle.grid(row=6, column=2)
         self.lb_time.grid(row=7, column=2)
         self.lb_TenHP.grid(row=9, column=2)
-        self.txt_TenHP.grid(row=10, column=2, padx=15)
+        self.txt_TenHP.grid(row=10, column=2, padx=18)
         self.btn_Accept.grid(row=16, column=2)
         self.btn_Summary.grid(row=18, column=2)
         '''
@@ -261,14 +260,18 @@ class Camera:
                    int(self.height / 10):int(self.height * 9 / 10),
                    int(self.width / 7):int(self.width * 6 / 7)]
         self.faces = self.cascade.detectMultiScale(self.box)
-        for (x, y, width, height) in self.faces:
-            face = self.box[x:x + width, y:y + height]
-            cv2.rectangle(self.image,
-                          (x + int(self.width / 7), y + int(self.height / 10)),
-                          (x + width + int(self.width / 7), y + height + int(self.height / 10)),
-                          (255, 0, 0), 2)
+        if (len(self.faces) > 1 ):
+            self.lb_message.configure(text="Phát Hiện Nhiều Hơn Một Gương Mặt, Không Thể Điểm Danh")
+        else:
+            self.lb_message.configure(text='Hãy Cho Gương Mặt Vào Khung Màu Xanh Để Nhận Diện')
+            for (x, y, width, height) in self.faces:
+                face = self.box[x:x + width, y:y + height]
+                cv2.rectangle(self.image,
+                              (x + int(self.width / 7), y + int(self.height / 10)),
+                              (x + width + int(self.width / 7), y + height + int(self.height / 10)),
+                              (0, 255, 0), 2)
         self.image = PIL.ImageTk.PhotoImage(image=PIL.Image.fromarray(self.image))
         return self.image
 
 
-d = Camera(mahp, tenhp, magv, date)
+d = Camera(mahp, tenhp, magv, date, database, server)

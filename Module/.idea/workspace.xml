@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ffba97f8-e002-4896-9f6b-24c2f41444f2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../App_DDSV/App_DDSV/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../App_DDSV/App_DDSV/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../App_DDSV/App_DDSV/UI_Camera.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../App_DDSV/App_DDSV/UI_Camera.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../App_DDSV/App_DDSV/bin/Debug/App_DDSV.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../App_DDSV/App_DDSV/bin/Debug/App_DDSV.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../App_DDSV/App_DDSV/bin/Debug/App_DDSV.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../App_DDSV/App_DDSV/bin/Debug/App_DDSV.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../App_DDSV/App_DDSV/bin/Debug/UI_Camera.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../App_DDSV/App_DDSV/bin/Debug/UI_Camera.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../App_DDSV/App_DDSV/conSql.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../App_DDSV/App_DDSV/conSql.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../App_DDSV/App_DDSV/obj/Debug/App_DDSV.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../App_DDSV/App_DDSV/obj/Debug/App_DDSV.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../App_DDSV/App_DDSV/obj/Debug/App_DDSV.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../App_DDSV/App_DDSV/obj/Debug/App_DDSV.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../App_DDSV/App_DDSV/obj/Debug/App_DDSV.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../App_DDSV/App_DDSV/obj/Debug/App_DDSV.csproj.GenerateResource.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../App_DDSV/App_DDSV/obj/Debug/App_DDSV.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../App_DDSV/App_DDSV/obj/Debug/App_DDSV.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../App_DDSV/App_DDSV/obj/Debug/App_DDSV.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../App_DDSV/App_DDSV/obj/Debug/App_DDSV.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../App_DDSV/App_DDSV/obj/Debug/DesignTimeResolveAssemblyReferences.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../App_DDSV/App_DDSV/obj/Debug/DesignTimeResolveAssemblyReferences.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../App_DDSV/App_DDSV/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../App_DDSV/App_DDSV/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/HT_DDSV.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI_Camera.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI_Camera.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI_Camera.spec" beforeDir="false" afterPath="$PROJECT_DIR$/UI_Camera.spec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/UI_Camera/Analysis-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/UI_Camera/Analysis-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/UI_Camera/EXE-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/UI_Camera/EXE-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/UI_Camera/PKG-00.pkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/UI_Camera/PKG-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/UI_Camera/PKG-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/UI_Camera/PYZ-00.pyz" beforeDir="false" afterPath="$PROJECT_DIR$/build/UI_Camera/PYZ-00.pyz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/UI_Camera/PYZ-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/UI_Camera/PYZ-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/UI_Camera/Tree-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/UI_Camera/Tree-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/UI_Camera/Tree-01.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/UI_Camera/Tree-01.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/UI_Camera/Tree-02.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/UI_Camera/Tree-02.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/UI_Camera/UI_Camera.exe.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/build/UI_Camera/UI_Camera.exe.manifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/UI_Camera/base_library.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/UI_Camera/base_library.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/UI_Camera/runw.exe.g58_yvma" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/UI_Camera/runw.exe.p1gdhto4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/UI_Camera/warn-UI_Camera.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/UI_Camera/warn-UI_Camera.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/UI_Camera/xref-UI_Camera.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/UI_Camera/xref-UI_Camera.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/UI_Camera.exe" beforeDir="false" afterPath="$PROJECT_DIR$/dist/UI_Camera.exe" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="20u2Bp4zQN9Duyvt8TQAGr5SB0g" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
+  </component>
+  <component name="RunManager">
+    <configuration name="UI_Camera" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Module" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\linhs\anaconda3\envs\module\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/UI_Camera.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.UI_Camera" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\linhs\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ffba97f8-e002-4896-9f6b-24c2f41444f2" name="Changes" comment="" />
+      <created>1636880021066</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1636880021066</updated>
+    </task>
+    <servers />
+  </component>
+</project>

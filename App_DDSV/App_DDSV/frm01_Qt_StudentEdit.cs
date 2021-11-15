@@ -99,7 +99,7 @@ namespace App_DDSV
                                 conSql.cmd.ExecuteNonQuery();
                                 conSql.conn.Close();
                             }
-                            MessageBox.Show("Chỉnh Sửa Thành Công", "Thành Công",
+                            MessageBox.Show("Thêm Thành Công", "Thành Công",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }

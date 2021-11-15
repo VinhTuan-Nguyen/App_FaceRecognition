@@ -5,7 +5,7 @@ block_cipher = None
 
 
 a = Analysis(['UI_Camera.py'],
-             pathex=['D:\\0_LOCAL\\App_FaceRecognition\\Module'],
+             pathex=[],
              binaries=[],
              datas=[],
              hiddenimports=[],

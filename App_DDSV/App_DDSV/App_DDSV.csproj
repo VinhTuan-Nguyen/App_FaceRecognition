@@ -316,5 +316,10 @@
   <ItemGroup>
     <None Include="Resources\refresh_hover.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="haarcascade_frontalface_alt2.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

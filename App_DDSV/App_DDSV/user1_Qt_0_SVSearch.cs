@@ -110,7 +110,7 @@ namespace App_DDSV
             lb_Info.Visible = false;
             if (txt_Date.Text == "  /  /" && (txt_Ten.Text =="" || txt_MSSV.Text == ""))
             {
-                MessageBox.Show("Cần Ít Nhất 2 Thông Tin Trở Lên", "Cảnh Báo",
+                MessageBox.Show("Cần Ít Nhất 2 Thông Tin Để Truy Vấn", "Cảnh Báo",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (txt_Date.Text == "  /  /")

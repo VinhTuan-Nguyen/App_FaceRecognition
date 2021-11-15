@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace App_DDSV
 {
     class conSql
     {
-        public static string db_Name = "";
-        public static string server_Name = "";
+        public static string server_Name = "DESKTOP-RT8LMKB;";
+        public static string db_Name = "db_DDSV;";
+
+
         public static string conString =
-            "Data Source=DESKTOP-KV5JDU2;" +
-            "Initial Catalog=db_DDSV;" +
+            "Data Source=" + server_Name +
+            "Initial Catalog=" + db_Name +
             "Integrated Security=True;" +
             "MultipleActiveResultSets=True";
         public static string query = "";

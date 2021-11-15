@@ -56,10 +56,12 @@ namespace App_DDSV
             Process process = new Process();
             process.StartInfo.FileName = @"UI_Camera.exe";
             process.StartInfo.Arguments =
-                txt_MaHP.Text + " " + "\"" +
-                txt_TenHP.Text + "\"" + " " +
-                lb_MaGV.Text + " " + "\"" +
-                now.ToString("dd-MM-yyyy HH:mm") + "\"";
+                txt_MaHP.Text + " " +
+                "\"" + txt_TenHP.Text + "\" " +
+                lb_MaGV.Text + " " +
+                "\"" + now.ToString("dd-MM-yyyy HH:mm") + "\" " +
+                conSql.db_Name + " " +
+                conSql.server_Name;
             process.Start();
             process.WaitForExit();
             frm02_Gv_Summary f = new frm02_Gv_Summary(txt_MaHP.Text, txt_TenHP.Text, now.ToString("dd-MM-yyyy HH:mm"));
