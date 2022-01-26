@@ -59,15 +59,15 @@ namespace App_DDSV
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgv_View_done = new System.Windows.Forms.DataGridView();
-            this.col_Stt_not = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_MaSV_not = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_HoTen_not = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_GhiChu_note = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_MaSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_GioDD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Stt_not = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_MaSV_not = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_HoTen_not = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_GhiChu_not = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -249,7 +249,7 @@ namespace App_DDSV
             this.lb_Khac.ForeColor = System.Drawing.Color.MediumBlue;
             this.lb_Khac.Location = new System.Drawing.Point(190, 578);
             this.lb_Khac.Name = "lb_Khac";
-            this.lb_Khac.Size = new System.Drawing.Size(92, 44);
+            this.lb_Khac.Size = new System.Drawing.Size(91, 44);
             this.lb_Khac.TabIndex = 14;
             this.lb_Khac.Text = "000";
             // 
@@ -261,7 +261,7 @@ namespace App_DDSV
             this.lb_HienDien.ForeColor = System.Drawing.Color.MediumBlue;
             this.lb_HienDien.Location = new System.Drawing.Point(16, 578);
             this.lb_HienDien.Name = "lb_HienDien";
-            this.lb_HienDien.Size = new System.Drawing.Size(92, 44);
+            this.lb_HienDien.Size = new System.Drawing.Size(91, 44);
             this.lb_HienDien.TabIndex = 13;
             this.lb_HienDien.Text = "000";
             // 
@@ -273,7 +273,7 @@ namespace App_DDSV
             this.lb_KhongP.ForeColor = System.Drawing.Color.MediumBlue;
             this.lb_KhongP.Location = new System.Drawing.Point(190, 481);
             this.lb_KhongP.Name = "lb_KhongP";
-            this.lb_KhongP.Size = new System.Drawing.Size(92, 44);
+            this.lb_KhongP.Size = new System.Drawing.Size(91, 44);
             this.lb_KhongP.TabIndex = 12;
             this.lb_KhongP.Text = "000";
             // 
@@ -285,7 +285,7 @@ namespace App_DDSV
             this.lb_CoP.ForeColor = System.Drawing.Color.MediumBlue;
             this.lb_CoP.Location = new System.Drawing.Point(16, 481);
             this.lb_CoP.Name = "lb_CoP";
-            this.lb_CoP.Size = new System.Drawing.Size(92, 44);
+            this.lb_CoP.Size = new System.Drawing.Size(91, 44);
             this.lb_CoP.TabIndex = 11;
             this.lb_CoP.Text = "000";
             // 
@@ -353,7 +353,7 @@ namespace App_DDSV
             this.col_Stt_not,
             this.col_MaSV_not,
             this.col_HoTen_not,
-            this.col_GhiChu_note});
+            this.col_GhiChu_not});
             this.dgv_View.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_View.Location = new System.Drawing.Point(0, 0);
             this.dgv_View.Name = "dgv_View";
@@ -368,6 +368,8 @@ namespace App_DDSV
             this.dgv_View.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_View.Size = new System.Drawing.Size(576, 737);
             this.dgv_View.TabIndex = 1;
+            this.dgv_View.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_View_CellDoubleClick);
+            this.dgv_View.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgv_View_RowPrePaint);
             // 
             // groupBox1
             // 
@@ -438,36 +440,8 @@ namespace App_DDSV
             this.dgv_View_done.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_View_done.Size = new System.Drawing.Size(611, 737);
             this.dgv_View_done.TabIndex = 0;
-            // 
-            // col_Stt_not
-            // 
-            this.col_Stt_not.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.col_Stt_not.HeaderText = "STT";
-            this.col_Stt_not.Name = "col_Stt_not";
-            this.col_Stt_not.Width = 50;
-            // 
-            // col_MaSV_not
-            // 
-            this.col_MaSV_not.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.col_MaSV_not.DataPropertyName = "col_MaSV";
-            this.col_MaSV_not.HeaderText = "MSSV";
-            this.col_MaSV_not.Name = "col_MaSV_not";
-            this.col_MaSV_not.Width = 150;
-            // 
-            // col_HoTen_not
-            // 
-            this.col_HoTen_not.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.col_HoTen_not.DataPropertyName = "col_HoTen";
-            this.col_HoTen_not.HeaderText = "Họ Tên";
-            this.col_HoTen_not.Name = "col_HoTen_not";
-            this.col_HoTen_not.Width = 200;
-            // 
-            // col_GhiChu_note
-            // 
-            this.col_GhiChu_note.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_GhiChu_note.DataPropertyName = "col_GhiChu";
-            this.col_GhiChu_note.HeaderText = "Ghi Chú";
-            this.col_GhiChu_note.Name = "col_GhiChu_note";
+            this.dgv_View_done.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_View_done_CellDoubleClick);
+            this.dgv_View_done.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgv_View_done_RowPrePaint);
             // 
             // col_Stt
             // 
@@ -507,6 +481,36 @@ namespace App_DDSV
             this.col_GhiChu.HeaderText = "Ghi Chú";
             this.col_GhiChu.Name = "col_GhiChu";
             this.col_GhiChu.Width = 200;
+            // 
+            // col_Stt_not
+            // 
+            this.col_Stt_not.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.col_Stt_not.HeaderText = "STT";
+            this.col_Stt_not.Name = "col_Stt_not";
+            this.col_Stt_not.Width = 50;
+            // 
+            // col_MaSV_not
+            // 
+            this.col_MaSV_not.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.col_MaSV_not.DataPropertyName = "col_MaSV";
+            this.col_MaSV_not.HeaderText = "MSSV";
+            this.col_MaSV_not.Name = "col_MaSV_not";
+            this.col_MaSV_not.Width = 150;
+            // 
+            // col_HoTen_not
+            // 
+            this.col_HoTen_not.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.col_HoTen_not.DataPropertyName = "col_HoTen";
+            this.col_HoTen_not.HeaderText = "Họ Tên";
+            this.col_HoTen_not.Name = "col_HoTen_not";
+            this.col_HoTen_not.Width = 200;
+            // 
+            // col_GhiChu_not
+            // 
+            this.col_GhiChu_not.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_GhiChu_not.DataPropertyName = "col_GhiChu";
+            this.col_GhiChu_not.HeaderText = "Ghi Chú";
+            this.col_GhiChu_not.Name = "col_GhiChu_not";
             // 
             // frm02_Gv_Summary
             // 
@@ -561,14 +565,14 @@ namespace App_DDSV
         private System.Windows.Forms.Label lb_HienDien;
         private System.Windows.Forms.Label lb_KhongP;
         private System.Windows.Forms.Label lb_CoP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_Stt_not;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_MaSV_not;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_HoTen_not;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_GhiChu_note;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Stt;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_MaSV;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_HoTen;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_GioDD;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_GhiChu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_Stt_not;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_MaSV_not;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_HoTen_not;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_GhiChu_not;
     }
 }

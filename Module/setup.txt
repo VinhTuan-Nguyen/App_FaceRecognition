@@ -1,0 +1,6 @@
+opencv-python==4.5.2.54
+mediapipe==0.8.6
+pyodbc
+pillow
+tensorflow==2.4.3
+pyinstaller

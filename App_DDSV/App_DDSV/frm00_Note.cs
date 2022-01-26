@@ -86,7 +86,7 @@ namespace App_DDSV
                     conSql.conn.Open();
                     conSql.cmd = new SqlCommand(conSql.query, conSql.conn);
                     conSql.cmd.Parameters.AddWithValue("@note", txt_GhiChu.Text);
-                    conSql.cmd.Parameters.AddWithValue("@date", DateTime.Parse(txt_Date.Text));
+                    conSql.cmd.Parameters.AddWithValue("@date", txt_Date.Text);
                     conSql.cmd.Parameters.AddWithValue("@mahp", txt_MaHP.Text);
                     conSql.cmd.Parameters.AddWithValue("@masv", txt_MaSV.Text);
                     conSql.cmd.Parameters.AddWithValue("@time", txt_Time.Text);

@@ -5,7 +5,7 @@ namespace App_DDSV
 {
     class conSql
     {
-        public static string server_Name = "DESKTOP-RT8LMKB;";
+        public static string server_Name = "DESKTOP-J3P25DG;";
         public static string db_Name = "db_DDSV;";
 
 

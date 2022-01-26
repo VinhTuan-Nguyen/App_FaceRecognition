@@ -107,12 +107,12 @@ namespace App_DDSV
             {
                 foreach (DataGridViewRow item in dgv_View_done.Rows)
                 {
-                    if (item.Cells["col_GhiChu_Done"].Value.ToString() == "Có Mặt") co += 1;
+                    if (item.Cells["col_GhiChu"].Value.ToString() == "Có Mặt") co += 1;
                     else phep += 1;
                 }
                 foreach (DataGridViewRow item in dgv_View.Rows)
                 {
-                    if (item.Cells["col_GhiChu_NotYet"].Value.ToString() == "Vắng") vang += 1;
+                    if (item.Cells["col_GhiChu_not"].Value.ToString() == "Không Phép") vang += 1;
                     else khac += 1;
                 }
                 lb_HienDien.Text = co.ToString();
@@ -120,6 +120,16 @@ namespace App_DDSV
                 lb_KhongP.Text = vang.ToString();
                 lb_CoP.Text = phep.ToString();
             }
+        }
+
+        private void dgv_View_done_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        {
+            dgv_View_done["col_Stt", e.RowIndex].Value = (e.RowIndex < 9 ? "0" : "") + (e.RowIndex + 1);
+        }
+
+        private void dgv_View_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        {
+            dgv_View["col_Stt_not", e.RowIndex].Value = (e.RowIndex < 9 ? "0" : "") + (e.RowIndex + 1);
         }
     }
 }

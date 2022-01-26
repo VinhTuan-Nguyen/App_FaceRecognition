@@ -59,7 +59,7 @@ namespace App_DDSV
                 txt_MaHP.Text + " " +
                 "\"" + txt_TenHP.Text + "\" " +
                 lb_MaGV.Text + " " +
-                "\"" + now.ToString("dd-MM-yyyy HH:mm") + "\" " +
+                "\"" + now.ToString("dd/MM/yyyy HH:mm") + "\" " +
                 conSql.db_Name + " " +
                 conSql.server_Name;
             process.Start();

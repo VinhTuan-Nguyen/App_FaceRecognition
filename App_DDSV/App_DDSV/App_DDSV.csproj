@@ -275,21 +275,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="haarcascade_frontalface_alt_tree.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="haarcascade_frontalface_default.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="UI_Camera.exe">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\tick.png" />
   </ItemGroup>
   <ItemGroup>
@@ -315,11 +300,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\refresh_hover.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="haarcascade_frontalface_alt2.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
