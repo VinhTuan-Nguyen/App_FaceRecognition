@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ACDF5867-8BE2-4A20-BFB8-D5BDB324E36D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>App_DDSV</RootNamespace>
+    <AssemblyName>App_DDSV</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="conSql.cs" />
+    <Compile Include="frm02_Gv_AddStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm02_Gv_AddStudent.Designer.cs">
+      <DependentUpon>frm02_Gv_AddStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm02_Gv_InfoLecturers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm02_Gv_InfoLecturers.Designer.cs">
+      <DependentUpon>frm02_Gv_InfoLecturers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm02_Gv_0Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm02_Gv_0Main.Designer.cs">
+      <DependentUpon>frm02_Gv_0Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm01_Qt_0Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm01_Qt_0Main.Designer.cs">
+      <DependentUpon>frm01_Qt_0Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm00_LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm00_LOGIN.designer.cs">
+      <DependentUpon>frm00_LOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm00_UpdatePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm00_UpdatePass.designer.cs">
+      <DependentUpon>frm00_UpdatePass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm01_Qt_ClassEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm01_Qt_ClassEdit.designer.cs">
+      <DependentUpon>frm01_Qt_ClassEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm01_Qt_LecturersEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm01_Qt_LecturersEdit.designer.cs">
+      <DependentUpon>frm01_Qt_LecturersEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm01_Qt_StudentEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm01_Qt_StudentEdit.designer.cs">
+      <DependentUpon>frm01_Qt_StudentEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm01_Qt_AccountEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm01_Qt_AccountEdit.designer.cs">
+      <DependentUpon>frm01_Qt_AccountEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm02_Gv_History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm02_Gv_History.designer.cs">
+      <DependentUpon>frm02_Gv_History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm00_Note.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm00_Note.designer.cs">
+      <DependentUpon>frm00_Note.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm02_Gv_Summary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm02_Gv_Summary.Designer.cs">
+      <DependentUpon>frm02_Gv_Summary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="user1_Qt_0_HPSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user1_Qt_0_HPSearch.Designer.cs">
+      <DependentUpon>user1_Qt_0_HPSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user1_Qt_Account.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user1_Qt_Account.Designer.cs">
+      <DependentUpon>user1_Qt_Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user1_Qt_Lecturers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user1_Qt_Lecturers.Designer.cs">
+      <DependentUpon>user1_Qt_Lecturers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user1_Qt_Class.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user1_Qt_Class.Designer.cs">
+      <DependentUpon>user1_Qt_Class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user1_Qt_Rollcall.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user1_Qt_Rollcall.Designer.cs">
+      <DependentUpon>user1_Qt_Rollcall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user1_Qt_Student.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user1_Qt_Student.Designer.cs">
+      <DependentUpon>user1_Qt_Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user1_Qt_ClassRegistration.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user1_Qt_ClassRegistration.Designer.cs">
+      <DependentUpon>user1_Qt_ClassRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user2_Gv_ClassInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user2_Gv_ClassInfo.Designer.cs">
+      <DependentUpon>user2_Gv_ClassInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user2_Gv_History.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user2_Gv_History.Designer.cs">
+      <DependentUpon>user2_Gv_History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user1_Qt_0_SVSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user1_Qt_0_SVSearch.Designer.cs">
+      <DependentUpon>user1_Qt_0_SVSearch.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frm01_Qt_0Main.resx">
+      <DependentUpon>frm01_Qt_0Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm00_LOGIN.resx">
+      <DependentUpon>frm00_LOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm00_UpdatePass.resx">
+      <DependentUpon>frm00_UpdatePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm01_Qt_ClassEdit.resx">
+      <DependentUpon>frm01_Qt_ClassEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm01_Qt_LecturersEdit.resx">
+      <DependentUpon>frm01_Qt_LecturersEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm01_Qt_StudentEdit.resx">
+      <DependentUpon>frm01_Qt_StudentEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm01_Qt_AccountEdit.resx">
+      <DependentUpon>frm01_Qt_AccountEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm02_Gv_AddStudent.resx">
+      <DependentUpon>frm02_Gv_AddStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm02_Gv_InfoLecturers.resx">
+      <DependentUpon>frm02_Gv_InfoLecturers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm02_Gv_0Main.resx">
+      <DependentUpon>frm02_Gv_0Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm02_Gv_History.resx">
+      <DependentUpon>frm02_Gv_History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm00_Note.resx">
+      <DependentUpon>frm00_Note.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm02_Gv_Summary.resx">
+      <DependentUpon>frm02_Gv_Summary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user1_Qt_0_HPSearch.resx">
+      <DependentUpon>user1_Qt_0_HPSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user1_Qt_0_SVSearch.resx">
+      <DependentUpon>user1_Qt_0_SVSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user1_Qt_Account.resx">
+      <DependentUpon>user1_Qt_Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user1_Qt_Class.resx">
+      <DependentUpon>user1_Qt_Class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user1_Qt_ClassRegistration.resx">
+      <DependentUpon>user1_Qt_ClassRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user1_Qt_Lecturers.resx">
+      <DependentUpon>user1_Qt_Lecturers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user1_Qt_Rollcall.resx">
+      <DependentUpon>user1_Qt_Rollcall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user1_Qt_Student.resx">
+      <DependentUpon>user1_Qt_Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user2_Gv_ClassInfo.resx">
+      <DependentUpon>user2_Gv_ClassInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user2_Gv_History.resx">
+      <DependentUpon>user2_Gv_History.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="model.h5">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="train112.data">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="UI_Camera.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_CTUT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_hover.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
